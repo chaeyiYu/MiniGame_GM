@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_player_movement",
+  "%Name":"PlayerStats",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_player_movement",
+  "name":"PlayerStats",
   "parent":{
     "name":"스크립트",
     "path":"folders/스크립트.yy",
