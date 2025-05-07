@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_ingame_controller",
+  "%Name":"InGameController",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_ingame_controller",
+  "name":"InGameController",
   "parent":{
     "name":"스크립트",
     "path":"folders/스크립트.yy",
