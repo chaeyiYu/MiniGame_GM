@@ -1,9 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_water",
-  "eventList":[],
+  "%Name":"obj_game_start",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_water",
+  "name":"obj_game_start",
   "overriddenProperties":[],
   "parent":{
     "name":"오브젝트",
@@ -27,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sp_water",
-    "path":"sprites/sp_water/sp_water.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

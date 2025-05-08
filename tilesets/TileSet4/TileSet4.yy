@@ -27,7 +27,7 @@
     "path":"texturegroups/Default",
   },
   "tileAnimationFrames":[
-    {"$GMTileAnimation":"","%Name":"animation_1","frames":[120,110,111,112,113,114,115,116,117,119,120,120,120,120,120,120,],"name":"animation_1","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
+    {"$GMTileAnimation":"","%Name":"animation_1","frames":[110,111,112,113,114,115,116,117,117,119,120,120,120,120,120,120,],"name":"animation_1","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
   ],
   "tileAnimationSpeed":15.0,
   "tileHeight":32,

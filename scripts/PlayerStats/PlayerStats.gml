@@ -1,13 +1,12 @@
 global.recoverCoeff = 0.3
 
 function Struct_PlayerStats(_hp, _speed, _recovery, _recoverDelay) constructor {
-	// 변수 필드
-	self.hp = _hp;
-	self.maxHp = _hp;
-	self.moveSpeed = _speed;
-	self.recovery = _recovery;
-	self.recoverDelay = _recoverDelay;
-	self.lastHitTime = 0;
+	hp = _hp;
+	maxHp = _hp;
+	moveSpeed = _speed;
+	recovery = _recovery;
+	recoverDelay = _recoverDelay;
+	lastHitTime = 0;
 	
 	// 메소드 필드
 	function SetMoveSpeed(_value){
