@@ -23,8 +23,8 @@ function MoveAround() {
 }
 // ***
 
-enemy1Fsm = new EnemyFSM();
-enemy1Fsm.Register("mage", enemy1StateMap, "act");
-show_debug_message(enemy1Fsm);
+//enemy1Fsm = new EnemyFSM();
+//enemy1Fsm.Register("mage", enemy1StateMap, "act");
+//show_debug_message(enemy1Fsm);
 
-enemy1Fsm.Register("goblin", enemy2StateMap, "act");
+//enemy1Fsm.Register("goblin", enemy2StateMap, "act");

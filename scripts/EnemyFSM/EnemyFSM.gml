@@ -21,53 +21,51 @@ enemyState[4] = "disturbed";
 
 /// @param {enum} 
 function EnemyFSM() constructor {
-	allStatesOfEnemies = {};  //전체 몬스터 타입과 해당 몬스터의 상태맵
 	currentState = undefined;
+	stateMap = {}
 	
-	// change  -- currentState 공유하는 문제
-	function ChangeState(_enemyType, _newState) {
-		if ( currentState == _newState) {
+	// change
+	function ChangeState(_newState) {
+		if (self.currentState == _newState || !struct_exists(self.stateMap, _newState)) {
 			return;
 		}
 		
-		if (currentState != undefined) {
-			allStatesOfEnemies[$ _enemyType][$ currentState].OnExit();	
+		if (self.currentState != undefined) {
+			self.stateMap[$ self.currentState].OnExit();
 		}
 		
-		currentState = _newState;
-		allStatesOfEnemies[$ _enemyType][$ currentState].OnEnter();
+		self.currentState = _newState;
+		self.stateMap[$ self.currentState].OnEnter();
 	}
 	
-	// call update
-	function Update(_enemyType) {
-		if (myStateMap != undefined) {
+
+	function Update() {
+		if (struct_names_count(self.stateMap) == 0) {
 			return;
 		}
 		
-		allStatesOfEnemies[$ _enemyType][$ currentState].OnUpdate();
+		self.stateMap[$ self.currentState].OnUpdate();
 	}
 	
 	
 	// each enemies register stateMap
-	function Register(_enemyType, _stateMap, _initState) {
-		if (struct_exists(allStatesOfEnemies, _enemyType) ||
-			!struct_exists(_stateMap, _initState)) {
-			
+	function Register(_stateMap, _initState) {
+		if (!struct_exists(_stateMap, _initState)
+			|| struct_names_count(self.stateMap) != 0) {  // 이미 초기화 되었다면
 			return;
 		}
 		
 		// stateMap 추가
-		struct_set(allStatesOfEnemies, _enemyType, _stateMap);
-		show_debug_message(struct_names_count(allStatesOfEnemies));
-		show_debug_message(allStatesOfEnemies);
-		
-		// init
-		//myStateMap = allStatesOfEnemies[$ _enemyType];
-		ChangeState(_enemyType, _initState);
+		self.stateMap = _stateMap;
+
+		show_debug_message(self.stateMap);
+
+		ChangeState(_initState);
 	}
 	
 	// 해당 몬스터의 stateMap 삭제
 	function Delete() {
+		
 	}
 	
 }

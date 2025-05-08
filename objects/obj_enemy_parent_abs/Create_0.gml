@@ -16,3 +16,5 @@ targetY = y;
 tileCollision = layer_tilemap_get_id("Tiles_Wall");
 
 alarm[0] = 60;
+
+myFsm = new EnemyFSM(); 

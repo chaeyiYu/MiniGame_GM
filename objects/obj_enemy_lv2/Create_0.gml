@@ -12,7 +12,6 @@ Enemy1Act.OnExit = function() {
 }
 
 enemy1StateMap = {
-	"act" : Enemy1Act,
 	"attack" : Enemy1Attack,
 }
 
@@ -21,4 +20,4 @@ enemy1StateMap = {
 // *** sample
 function MoveEnter() { show_debug_message("move enter")};
 
-myFsm.Register(enemy1StateMap, "act");
+myFsm.Register(enemy1StateMap, "attack");
