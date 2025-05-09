@@ -7,8 +7,10 @@ if (instance_exists(obj_player) && distance_to_object(obj_player) < detectDistan
 }
 else
 {
-	targetX = random_range(xstart - 200, xstart + 200);
-	targetY = random_range(ystart - 200, ystart + 200);
+	//targetX = random_range(xstart - 200, xstart + 200);
+	//targetY = random_range(ystart - 200, ystart + 200);
 }
+
+
 
 alarm[0] = 60;

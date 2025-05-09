@@ -3,11 +3,11 @@
 
 event_inherited();
 
-Enemy1Act = new State();
+mageAct = new State();
 Enemy1Attack = new State();
 
-Enemy1Act.OnEnter = MoveEnter;
-Enemy1Act.OnExit = function() {
+mageAct.OnEnter = MoveEnter;
+mageAct.OnExit = function() {
 	show_debug_message("exit");
 }
 

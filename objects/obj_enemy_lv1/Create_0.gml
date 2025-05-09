@@ -1,24 +1,25 @@
-/// @description 여기에 설명 삽입
-// 이 에디터에 코드를 작성할 수 있습니다
+/// @description
 
 event_inherited();
 
-Enemy1Act = new State();
-Enemy1Attack = new State();
+timer = 0;
 
-Enemy1Act.OnEnter = MoveEnter;
-Enemy1Act.OnExit = function() {
-	show_debug_message("exit");
+
+#region 함수정의
+function InitState() {
+	patrolStateMage = new PatrolState_Mage();
+	chaseStateMage = new ChaseState_Mage();
+	attackStateMage = new AttackState_Mage();
+	
+	// state 이름과 객체 매핑
+	mageStateMap = {
+	"patrol" : patrolStateMage,
+	"chase" : chaseStateMage,
+	"attack" : attackStateMage,
+	}
+	
+	myFsm.Register(mageStateMap, "patrol");
 }
+#endregion
 
-enemy1StateMap = {
-	"act" : Enemy1Act,
-	"attack" : Enemy1Attack,
-}
-
-
-
-// *** sample
-function MoveEnter() { show_debug_message("move enter")};
-
-myFsm.Register(enemy1StateMap, "act");
+InitState();

@@ -1,11 +1,3 @@
-enum EEnemyState {
-	idle,
-	act,
-	chase,
-	attack,
-	disturbed,
-}
-
 
 enemyType = array_create(10);
 enemyType[0] = "mage";
@@ -25,9 +17,14 @@ function EnemyFSM() constructor {
 	stateMap = {}
 	
 	// change
-	function ChangeState(_newState) {
-		if (self.currentState == _newState || !struct_exists(self.stateMap, _newState)) {
+	function ChangeState(_newState, _allowSameState = false) {
+		if (!struct_exists(self.stateMap, _newState)) {
 			return;
+		}
+		if (!_allowSameState) {
+			if (self.currentState == _newState) {
+				return;
+			}
 		}
 		
 		if (self.currentState != undefined) {
@@ -36,6 +33,8 @@ function EnemyFSM() constructor {
 		
 		self.currentState = _newState;
 		self.stateMap[$ self.currentState].OnEnter();
+		
+		show_debug_message($"{currentState} --- in ChangeState");
 	}
 	
 

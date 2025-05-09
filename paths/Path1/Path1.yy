@@ -1,0 +1,25 @@
+{
+  "$GMPath":"",
+  "%Name":"Path1",
+  "closed":true,
+  "kind":1,
+  "name":"Path1",
+  "parent":{
+    "name":"경로",
+    "path":"folders/경로.yy",
+  },
+  "points":[
+    {"speed":100.0,"x":192.0,"y":320.0,},
+    {"speed":100.0,"x":160.0,"y":224.0,},
+    {"speed":100.0,"x":128.0,"y":309.0,},
+    {"speed":100.0,"x":64.0,"y":288.0,},
+    {"speed":100.0,"x":56.0,"y":60.0,},
+    {"speed":1.0,"x":531.0,"y":82.0,},
+    {"speed":1.0,"x":512.0,"y":288.0,},
+    {"speed":1.0,"x":384.0,"y":320.0,},
+    {"speed":100.0,"x":320.0,"y":320.0,},
+  ],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}

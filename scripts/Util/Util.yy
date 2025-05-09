@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"Enemy1State",
+  "%Name":"Util",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Enemy1State",
+  "name":"Util",
   "parent":{
     "name":"스크립트",
     "path":"folders/스크립트.yy",
