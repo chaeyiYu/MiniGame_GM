@@ -2,4 +2,9 @@
 // 이 에디터에 코드를 작성할 수 있습니다
 draw_self();
 
-draw_circle(x, y, 70, true);
+var originColor = draw_get_color();
+
+draw_set_color(c_red);
+draw_circle(x, y, attackDistance, true);
+draw_set_color(originColor);
+draw_circle(x, y, detectDistance, true);

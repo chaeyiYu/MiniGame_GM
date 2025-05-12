@@ -10,7 +10,15 @@
   ],
   "managed":true,
   "name":"obj_enemy_lv1",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_parent_abs","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"propertyId":{"name":"attackDistance","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"20",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_parent_abs","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"propertyId":{"name":"detectDistance","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"50",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_parent_abs","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"propertyId":{"name":"randMinX","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"500",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_parent_abs","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"propertyId":{"name":"randMaxX","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"500",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_parent_abs","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"propertyId":{"name":"randMinY","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"800",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_parent_abs","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"propertyId":{"name":"randMaxY","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"800",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_parent_abs","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"propertyId":{"name":"attackPower","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"30",},
+  ],
   "parent":{
     "name":"enemy",
     "path":"folders/오브젝트/enemy.yy",

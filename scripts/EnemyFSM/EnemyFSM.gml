@@ -1,16 +1,4 @@
 
-enemyType = array_create(10);
-enemyType[0] = "mage";
-
-
-enemyState = array_create(5);
-enemyState[0] = "idle";
-enemyState[1] = "act";
-enemyState[2] = "chase";
-enemyState[3] = "attack";
-enemyState[4] = "disturbed";
-
-
 /// @param {enum} 
 function EnemyFSM() constructor {
 	currentState = undefined;
@@ -70,7 +58,8 @@ function EnemyFSM() constructor {
 }
 
 /// @desc 
-function State() constructor {
+function State(_owner) constructor {
+	owner = _owner;
 	OnEnter = function() {}
 	OnUpdate = function() {}
 	OnExit = function() {}

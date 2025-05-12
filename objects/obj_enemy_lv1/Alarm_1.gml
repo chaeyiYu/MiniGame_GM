@@ -1,10 +1,3 @@
-/// @description watch 또는 move 랜덤 선택
-
-var choice = random_range(0.0, 1.0);
-
-if (choice >= 6.5) {
-	myFsm.ChangeState("watch", true);
-}
-else {
-	myFsm.ChangeState("move", true);
-}
+/// @description 여기에 설명 삽입
+// 이 에디터에 코드를 작성할 수 있습니다
+myFsm.ChangeState("patrol");

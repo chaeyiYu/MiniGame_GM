@@ -7,9 +7,9 @@ timer = 0;
 
 #region 함수정의
 function InitState() {
-	patrolStateMage = new PatrolState_Mage();
-	chaseStateMage = new ChaseState_Mage();
-	attackStateMage = new AttackState_Mage();
+	patrolStateMage = new PatrolState_Mage(self);
+	chaseStateMage = new ChaseState_Mage(self);
+	attackStateMage = new AttackState_Mage(self);
 	
 	// state 이름과 객체 매핑
 	mageStateMap = {
