@@ -2,3 +2,9 @@
 // 이 에디터에 코드를 작성할 수 있습니다
 
 // 시작할 때 플레이어 동적생성, 아이템과 몬스터 랜덤
+
+global.itemCross = new CrossItem("cross");
+global.itemEffects = [];
+
+global.key = 0;
+global.maxKey = 5;
