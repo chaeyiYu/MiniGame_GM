@@ -9,24 +9,10 @@ switch (myFsm.currentState) {
 		}
 		break;
 	case "chase" :
-		if (distance_to_object(obj_player) > detectDistance + 5) {
+		if (distance_to_object(obj_player) > detectDistance + 50) {
 			myFsm.ChangeState("patrol");
 		}
 		else if (distance_to_object(obj_player) < attackDistance) {
 			myFsm.ChangeState("attack");
 		}
-}
-
-
-if (instance_exists(obj_player)) {
-	if (distance_to_object(obj_player) < attackDistance) {
-		myFsm.ChangeState("attack");
-	}
-	else if (distance_to_object(obj_player) < detectDistance) {
-		myFsm.ChangeState("chase");
-	}
-	else{
-		// 가깝지 않으면 정찰
-		myFsm.ChangeState("patrol");
-	}
 }

@@ -1,38 +1,3 @@
-function InitTimer(_owner) {
-	if (variable_instance_exists(_owner.id, timer)) {
-		timer = 0;
-	}
-	else {
-		return;
-	}
-}
-
-function SetAlarm(_owner, _index = 0) {
-	_owner.alarm[_index] = 60;
-}
-
-function RemoveAlarm(_owner, _index = 0) {
-	_owner.alarm[_index] = -1;
-}
-
-// 함수 보류
-function ActUpdate(_owner, _delayTime, _newState, _alarmIndex = 0) {
-	if (object_get_parent(_owner) != obj_enemy_parent_abs) {
-		return;
-	}
-	
-	with (_owner) {
-	if (timer > _delayTime) {
-		alarm[_alarmIndex] = -1;
-		myFsm.ChangeState(_newState);
-	}
-
-	alarm[_alarmIndex] = 60;
-	}
-	
-}
-
-
 // ============ watch ============
 //function WatchState_Mage() : State() constructor {
 //	var duration = random_range(2.0, 5.0);
@@ -88,9 +53,7 @@ function ChaseState_Mage(_owner) : State(_owner) constructor {
 	
 	OnEnter = function() {
 		originValue = owner.moveSpeed;
-		owner.moveSpeed *= 2;
-		show_debug_message(obj_enemy_lv1.moveSpeed);
-		show_debug_message(owner.moveSpeed);
+		owner.moveSpeed *= 1.5;
 	}
 	
 	OnUpdate = function() {
@@ -107,13 +70,15 @@ function ChaseState_Mage(_owner) : State(_owner) constructor {
 function AttackState_Mage(_owner) : State(_owner) constructor {
 	OnEnter = function() {
 		var atkPower = owner.attackPower;
+		var enemy = owner;
 		with(obj_player) {
 			Damage(atkPower);
 			
 			// damage effect
+			
 			GoToInitPos();
 			// alarm ??
-			alarm[1] = 60 * 1;
+			enemy.alarm[1] = 60 * 1;
 		}
 		show_debug_message("attack enter");
 	}
