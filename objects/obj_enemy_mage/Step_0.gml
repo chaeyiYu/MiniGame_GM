@@ -4,15 +4,15 @@ event_inherited();
 
 switch (myFsm.currentState) {
 	case "patrol" :
-		if (distance_to_object(obj_player) < detectDistance) {
+		if (point_distance(x, y, obj_player.x, obj_player.y) < detectDistance) {
 		myFsm.ChangeState("chase");
 		}
 		break;
 	case "chase" :
-		if (distance_to_object(obj_player) > detectDistance + 50) {
+		if (point_distance(x, y, obj_player.x, obj_player.y) > detectDistance) {
 			myFsm.ChangeState("patrol");
 		}
-		else if (distance_to_object(obj_player) < attackDistance) {
+		else if (point_distance(x, y, obj_player.x, obj_player.y) < attackDistance) {
 			myFsm.ChangeState("attack");
 		}
 }

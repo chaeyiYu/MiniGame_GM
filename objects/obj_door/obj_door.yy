@@ -1,20 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_enemy_lv2",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_door",
+  "eventList":[],
   "managed":true,
-  "name":"obj_enemy_lv2",
+  "name":"obj_door",
   "overriddenProperties":[],
   "parent":{
-    "name":"enemy",
-    "path":"folders/오브젝트/enemy.yy",
+    "name":"오브젝트",
+    "path":"folders/오브젝트.yy",
   },
-  "parentObjectId":{
-    "name":"obj_enemy_parent_abs",
-    "path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_mon_lv1",
-    "path":"sprites/spr_mon_lv1/spr_mon_lv1.yy",
+    "name":"spr_door1",
+    "path":"sprites/spr_door1/spr_door1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

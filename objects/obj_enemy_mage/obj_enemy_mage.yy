@@ -1,6 +1,6 @@
 {
   "$GMObject":"",
-  "%Name":"obj_enemy_lv1",
+  "%Name":"obj_enemy_mage",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
@@ -9,15 +9,16 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":1,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_enemy_lv1",
+  "name":"obj_enemy_mage",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_parent_abs","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"propertyId":{"name":"attackDistance","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"15",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_parent_abs","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"propertyId":{"name":"attackDistance","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"20",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_parent_abs","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"propertyId":{"name":"detectDistance","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"120",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_parent_abs","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"propertyId":{"name":"attackPower","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"30",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_parent_abs","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"propertyId":{"name":"moveSpeed","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"2",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_parent_abs","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"propertyId":{"name":"randMinX","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"500",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_parent_abs","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"propertyId":{"name":"randMaxX","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"500",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_parent_abs","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"propertyId":{"name":"randMinY","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"800",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_parent_abs","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"propertyId":{"name":"randMaxY","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"800",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_parent_abs","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"propertyId":{"name":"attackPower","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"30",},
   ],
   "parent":{
     "name":"enemy",
@@ -45,8 +46,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_mon_lv1",
-    "path":"sprites/spr_mon_lv1/spr_mon_lv1.yy",
+    "name":"spr_mage",
+    "path":"sprites/spr_mage/spr_mage.yy",
   },
   "spriteMaskId":null,
   "visible":true,

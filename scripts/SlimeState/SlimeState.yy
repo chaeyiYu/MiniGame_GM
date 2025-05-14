@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"MageState_1",
+  "%Name":"SlimeState",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"MageState_1",
+  "name":"SlimeState",
   "parent":{
     "name":"스크립트",
     "path":"folders/스크립트.yy",
