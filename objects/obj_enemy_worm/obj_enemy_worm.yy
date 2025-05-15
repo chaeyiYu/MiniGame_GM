@@ -9,9 +9,8 @@
   "managed":true,
   "name":"obj_enemy_worm",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_parent_abs","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"propertyId":{"name":"moveSpeed","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"3.5",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_parent_abs","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"propertyId":{"name":"attackPower","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"35",},
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_parent_abs","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"propertyId":{"name":"attackDistance","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"50",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_parent_abs","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"propertyId":{"name":"moveSpeed","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"3.5",},
   ],
   "parent":{
     "name":"enemy",

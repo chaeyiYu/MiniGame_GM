@@ -17,6 +17,3 @@ function InitState() {
 }
 
 InitState();
-
-show_debug_message($"{myFsm.stateMap} fsm의 statemap ");
-show_debug_message($"{myFsm.currentState} slime의 state");

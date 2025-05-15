@@ -7,6 +7,7 @@ for (var i = array_length(global.itemEffects) - 1; i>=0 ; i--) {
 	var item = global.itemEffects[i];
 	
 	if (!item.isEffectDraw) {
+		draw_sprite(item.sprite, -1, item.x, item.y);
 		continue;
 	}
 

@@ -1,8 +1,8 @@
 /// @description 여기에 설명 삽입
 // 이 에디터에 코드를 작성할 수 있습니다
 
-var width = display_get_width();
-var height = display_get_height();
+var width = display_get_gui_width();
+var height = display_get_gui_height();
 
 if (isFade && surface_exists(surfFadeOut)) {
 	surface_set_target(surfFadeOut);

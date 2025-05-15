@@ -16,7 +16,6 @@ function AttackState_Slime(_owner) : State(_owner) constructor {
 			// alarm ??
 			enemy.alarm[0] = 60 * 1;
 		}
-		show_debug_message("attack enter");
 	}
 
 }

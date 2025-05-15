@@ -2,17 +2,16 @@
 // 이 에디터에 코드를 작성할 수 있습니다
 
 // create stat
-myStats = new Struct_PlayerStats(100, 3, 10, 10);
+originSpeed = 3;
+myStats = new Struct_PlayerStats(100, originSpeed, 10, 10);
 
-// item inventroy
+// items
 myItems = [];
 
 minX = sprite_width;
 maxX = room_width - sprite_width;
 minY = sprite_height;
 maxY = room_height - sprite_height;
-
-tileCollider = layer_tilemap_get_id("Tiles_Wall");
 
 
 function Move() {
@@ -28,9 +27,16 @@ function Move() {
 		if place_meeting(x + xAdd, y, [global.tileCollider, obj_door]) {
 			xAdd = 0;
 		}
-		
 		if place_meeting(x, y + yAdd, [global.tileCollider, obj_door]) {
 			yAdd = 0;
+		}
+		
+		// water
+		if place_meeting(x + xAdd, y, global.waterlayer) {
+			xAdd *= 0.3;
+		}
+		if place_meeting(x, y + yAdd, global.waterlayer) {
+			yAdd *= 0.3;
 		}
 		
 		x += xAdd;
@@ -47,10 +53,10 @@ function Move() {
 
 function WalkOrRun() {
 	if (keyboard_check(vk_shift)){
-		myStats.SetMoveSpeed(5);
+		myStats.SetMoveSpeed(originSpeed * 1.5);
 	}
 	else {
-		myStats.SetMoveSpeed(3);
+		myStats.SetMoveSpeed(originSpeed);
 	}
 	Move();
 }

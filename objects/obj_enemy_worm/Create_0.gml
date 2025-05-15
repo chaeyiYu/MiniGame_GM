@@ -19,7 +19,7 @@ function MoveVertical() {
 	targetX = x;
 	targetY = isGoingDown ? y + yOffset : y - yOffset;
 	
-	if place_meeting(targetX, targetY, tileCollision) {
+	if place_meeting(targetX, targetY, global.tileCollider) {
 		isGoingDown = !isGoingDown;
 	}
 	else {

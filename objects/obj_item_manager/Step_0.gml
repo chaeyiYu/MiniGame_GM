@@ -7,7 +7,7 @@ for (var i = array_length(global.itemEffects) - 1; i>=0 ; i--) {
 	}
 	
 	if (item.delay == -1) {
-		array_delete(global.itemEffects, i, 1);
+		//array_delete(global.itemEffects, i, 1);
 		continue;
 	}
 	

@@ -5,12 +5,14 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_enemy_slime_s",
   "overriddenProperties":[
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_parent_abs","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"propertyId":{"name":"attackPower","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"30",},
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_parent_abs","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"propertyId":{"name":"attackDistance","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"50",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_parent_abs","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"propertyId":{"name":"moveSpeed","path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"5",},
   ],
   "parent":{
     "name":"enemy",

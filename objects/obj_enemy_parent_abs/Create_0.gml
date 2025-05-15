@@ -3,7 +3,7 @@
 targetX = x;
 targetY = y;
 
-tileCollision = layer_tilemap_get_id("Tiles_Wall");
+//tileCollision = layer_tilemap_get_id("Tiles_Wall");
 
 minX = sprite_width;
 maxX = room_width - sprite_width;
@@ -22,12 +22,12 @@ function EnemyMoveBase() {
 	var _dy = lengthdir_y(_moveAdd, _dir);
 	
 	// collision
-	if place_meeting(x + _dx, y, [tileCollision, obj_enemy_parent_abs]) {
+	if place_meeting(x + _dx, y, [global.tileCollider, obj_enemy_parent_abs]) {
 		_dx = 0;
 		//show_debug_message("x 앞에 벽");
 	}
 	
-	if place_meeting(x, y + _dy, [tileCollision, obj_enemy_parent_abs]) {
+	if place_meeting(x, y + _dy, [global.tileCollider, obj_enemy_parent_abs]) {
 		_dy = 0;
 		//show_debug_message("y 앞에 벽");
 	}

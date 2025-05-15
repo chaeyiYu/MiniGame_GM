@@ -7,6 +7,7 @@ function EnemyFSM() constructor {
 	// change
 	function ChangeState(_newState, _allowSameState = false) {
 		if (!struct_exists(self.stateMap, _newState)) {
+			show_debug_message("state not exist");
 			return;
 		}
 		if (!_allowSameState) {
