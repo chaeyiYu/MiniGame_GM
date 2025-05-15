@@ -5,6 +5,10 @@ global.originColor = draw_get_color();
 
 for (var i = array_length(global.itemEffects) - 1; i>=0 ; i--) {
 	var item = global.itemEffects[i];
+	
+	if (!item.isEffectDraw) {
+		continue;
+	}
 
 	draw_set_alpha(0.2);
 	draw_set_color(c_yellow);

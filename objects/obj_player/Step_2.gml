@@ -5,5 +5,7 @@ x = clamp(x, minX, maxX);
 y = clamp(y, minY, maxY);
 
 with(all) {
-	depth = -bbox_bottom;
+	if (layer != global.structLayer) {
+		depth = -bbox_bottom;
+	}
 }

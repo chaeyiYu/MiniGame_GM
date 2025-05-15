@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"Util",
+  "%Name":"WormState",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Util",
+  "name":"WormState",
   "parent":{
     "name":"스크립트",
     "path":"folders/스크립트.yy",

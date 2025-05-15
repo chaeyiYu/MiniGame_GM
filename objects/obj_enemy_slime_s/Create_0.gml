@@ -6,17 +6,17 @@ event_inherited();
 function InitState() {
 	idleStateSlime = new IdleState_Slime_s(self);
 	attackStateSlime = new AttackState_Slime(self);
+	itemHitStateSlime = new ItemHitState_Slime(self);
 	
 	// state 이름과 객체 매핑
 	slimeSmallStateMap = {
 	"idle" : idleStateSlime,
 	"attack" : attackStateSlime,
+	"itemHit" : itemHitStateSlime,
 	}
 	
 	myFsm.Register(slimeSmallStateMap, "idle");
 }
 
-InitState();
 
-show_debug_message($"{myFsm.stateMap} fsm의 statemap ");
-show_debug_message($"{myFsm.currentState} slime의 state");
+InitState();

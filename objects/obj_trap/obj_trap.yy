@@ -1,13 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_ingame_controller",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_trap",
+  "eventList":[],
   "managed":true,
-  "name":"obj_ingame_controller",
+  "name":"obj_trap",
   "overriddenProperties":[],
   "parent":{
     "name":"오브젝트",
@@ -31,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_potal",
+    "path":"sprites/spr_potal/spr_potal.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

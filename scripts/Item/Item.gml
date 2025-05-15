@@ -14,6 +14,7 @@ function CrossItem(_id) : ItemBase(_id) constructor {
 		var effect = {
 			x : _x,
 			y : _y,
+			isEffectDraw : true,
 			radius : radius,
 			damaged : false,
 			delay : 60 * 5,
@@ -43,6 +44,7 @@ function Screw(_id) : ItemBase(_id) constructor {
 		var effect = {
 			x : _x,
 			y : _y,
+			isEffectDraw : true,
 			radius : radius,
 			damaged : false,
 			delay : 60 * 5,
@@ -54,6 +56,31 @@ function Screw(_id) : ItemBase(_id) constructor {
 						other.damaged = true;
 					show_debug_message($"after slow : {moveSpeed}");
 					}
+				}
+			}
+			
+		}
+		array_push(global.itemEffects, effect);
+	}
+
+}
+
+function Apple(_id) : ItemBase(_id) constructor {
+	Use = function(_x, _y) {
+
+		var effect = {
+			x : _x,
+			y : _y,
+			isEffectDraw : false,
+			damaged : false,
+			delay : -1,
+			sprite: spr_item_apple,
+			Damage : function() {
+				with (obj_enemy_slime_s) {
+					targetX = x;
+					targetY = y;
+					myFsm.ChangeState("itemHit");
+					show_debug_message("slime~~~~item hit~~~~~~");
 				}
 			}
 			

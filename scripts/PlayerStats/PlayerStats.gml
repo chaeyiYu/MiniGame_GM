@@ -1,4 +1,4 @@
-global.recoverCoeff = 0.3
+global.recoverCoeff = 0.2
 
 function Struct_PlayerStats(_hp, _speed, _recovery, _recoverDelay) constructor {
 	hp = _hp;
@@ -6,6 +6,7 @@ function Struct_PlayerStats(_hp, _speed, _recovery, _recoverDelay) constructor {
 	moveSpeed = _speed;
 	recovery = _recovery;
 	recoverDelay = _recoverDelay;
+	recoverTime = 2;
 	lastHitTime = 0;
 	
 	// 메소드 필드

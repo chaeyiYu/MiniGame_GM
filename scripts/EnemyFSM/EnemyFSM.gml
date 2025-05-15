@@ -45,8 +45,6 @@ function EnemyFSM() constructor {
 		// stateMap 추가
 		self.stateMap = _stateMap;
 
-		show_debug_message(self.stateMap);
-
 		ChangeState(_initState);
 	}
 	

@@ -2,7 +2,7 @@
 // 이 에디터에 코드를 작성할 수 있습니다
 
 // create stat
-myStats = new Struct_PlayerStats(100, 3, 50, 10);
+myStats = new Struct_PlayerStats(100, 3, 10, 10);
 
 // item inventroy
 myItems = [];
@@ -25,11 +25,11 @@ function Move() {
 		var yAdd = lengthdir_y(myStats.moveSpeed, lookDir);
 
 		// collision
-		if place_meeting(x + xAdd, y, tileCollider) {
+		if place_meeting(x + xAdd, y, [global.tileCollider, obj_door]) {
 			xAdd = 0;
 		}
 		
-		if place_meeting(x, y + yAdd, tileCollider) {
+		if place_meeting(x, y + yAdd, [global.tileCollider, obj_door]) {
 			yAdd = 0;
 		}
 		
@@ -40,19 +40,6 @@ function Move() {
 		if (dirHorizontal != 0) {
 			image_xscale = -dirHorizontal;
 		}
-		
-//		var _viewX = camera_get_view_x(view_camera[0]);
-//var _viewY = camera_get_view_y(view_camera[0]);
-//var _viewW = camera_get_view_width(view_camera[0]);
-//var _viewH = camera_get_view_height(view_camera[0]);
-
-//var _gotoX = x + (xAdd) - (_viewW * 0.5);
-//var _gotoY = y + (yAdd) - (_viewH * 0.5);
-
-//var _newX = lerp(_viewX, _gotoX, 0.1);
-//var _newY = lerp(_viewY, _gotoY, 0.1);
-
-//camera_set_view_pos(view_camera[0], _newX, _newY);
 
 	}
 	

@@ -20,3 +20,10 @@ function AttackState_Slime(_owner) : State(_owner) constructor {
 	}
 
 }
+
+function ItemHitState_Slime(_owner) : State(_owner) constructor {
+	OnUpdate = function() {
+		owner.EnemyMoveBase();
+	}
+
+}
