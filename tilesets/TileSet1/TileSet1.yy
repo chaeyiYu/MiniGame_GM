@@ -21,13 +21,13 @@
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"tiles",
-    "path":"sprites/tiles/tiles.yy",
+    "name":"tiles23",
+    "path":"sprites/tiles23/tiles23.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"tg_tile",
+    "path":"texturegroups/tg_tile",
   },
   "tileAnimationFrames":[],
   "tileAnimationSpeed":15.0,

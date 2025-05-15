@@ -705,8 +705,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"tg_game_play",
+    "path":"texturegroups/tg_game_play",
   },
   "type":0,
   "VTile":false,

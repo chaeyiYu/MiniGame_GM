@@ -17,14 +17,11 @@
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
-  "spriteId":{
-    "name":"autotiles",
-    "path":"sprites/autotiles/autotiles.yy",
-  },
+  "spriteId":null,
   "spriteNoExport":false,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"tg_tile",
+    "path":"texturegroups/tg_tile",
   },
   "tileAnimationFrames":[],
   "tileAnimationSpeed":15.0,
