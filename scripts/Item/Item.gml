@@ -6,10 +6,9 @@ function ItemBase(_id) constructor {
 
 // Items
 function CrossItem(_id) : ItemBase(_id) constructor {
+	
 	Use = function(_x, _y) {
 		var radius = 100;
-		
-		show_debug_message("use~~~~~~item crossitem");
 
 		var effect = {
 			x : _x,
@@ -26,6 +25,7 @@ function CrossItem(_id) : ItemBase(_id) constructor {
 						other.damaged = true;
 					}
 				}
+				
 			}
 			
 		}
@@ -36,6 +36,7 @@ function CrossItem(_id) : ItemBase(_id) constructor {
 
 
 function AppleItem(_id) : ItemBase(_id) constructor {
+	
 	Use = function(_x, _y) {
 
 		var effect = {
@@ -53,6 +54,7 @@ function AppleItem(_id) : ItemBase(_id) constructor {
 					if (point_distance(x, y, targetX, targetY) <= other.distance) {
 						myFsm.ChangeState("itemHit");
 					}
+					other.damaged = true;
 				}
 			}
 			

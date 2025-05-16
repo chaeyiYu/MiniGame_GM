@@ -49,11 +49,6 @@ function EnemyFSM() constructor {
 		ChangeState(_initState);
 	}
 	
-	// 해당 몬스터의 stateMap 삭제
-	function Delete() {
-		
-	}
-	
 }
 
 /// @desc 

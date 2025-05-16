@@ -6,6 +6,7 @@ fadeSpeed = 0.02;
 alpha = 1;
 
  function StartFadeOut(_fadeSpeed) {
+	if (isFade) return;
 	isFade = true;
 	fadeSpeed = _fadeSpeed;
 	alpha = 1;

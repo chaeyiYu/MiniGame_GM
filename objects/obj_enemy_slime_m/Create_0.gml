@@ -4,7 +4,7 @@
 event_inherited();
 
 function InitState() {
-	idleStateSlime = new IdleState_Slime_s(self);
+	idleStateSlime = new IdleState_Slime(self);
 	attackStateSlime = new AttackState_Slime(self);
 	
 	// state 이름과 객체 매핑

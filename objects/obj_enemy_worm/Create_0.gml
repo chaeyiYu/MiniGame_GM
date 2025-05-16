@@ -6,14 +6,11 @@ event_inherited();
 isGoingDown = true;
 
 function SetRangeOfY() {
-	randomize();
-	randMinY = random_range(0.1, 2.0);
-	randMaxY = random_range(8.0, 10.0);
+	randMinY = random_range(0.5, 2.0);
+	randMaxY = random_range(8.0, 11.0);
 }
 
 function MoveVertical() {
-	randomize();
-	
 	yOffset = random_range(randMinY, randMaxY);
 	
 	targetX = x;

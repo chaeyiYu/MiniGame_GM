@@ -2,11 +2,8 @@
 // 이 에디터에 코드를 작성할 수 있습니다
 
 // create stat
-originSpeed = 3;
+originSpeed = 5;
 myStats = new Struct_PlayerStats(100, originSpeed, 10, 10);
-
-// items
-myItems = [];
 
 minX = sprite_width;
 maxX = room_width - sprite_width;
@@ -61,30 +58,26 @@ function WalkOrRun() {
 	Move();
 }
 
-function UseItem() {
-// 아이템 id 받아와서 해당 아이템.Use
-// 각 아이템 내에서 Use 효과 구현
-// 던지기, 내려놓기 등 플레이어 행동 구분?
-
+function Heal(_amount) {
+	myStats.Heal(_amount);
 }
-
 
 function Damage(_amount) {
 	myStats.Damage(_amount);
 }
 
 function OnDead() {
-	// temp. 
-	// 게임오버 오브젝트 만들어서 창 띄우기 or 다른 함수 호출??
-	//instance_create_depth(0, 0, 0, obj_game_over);
-	
-	// ...... 할일 하고 마지막에
-	//instance_destroy();
+	global.gameResult = eResult.over;
+	with (obj_fadeout) {
+		StartFadeOut(0.03);
+	}
+	alarm[1] = 60 * 1;
 }
 
 function GoToInitPos() {
 	x = xstart;
 	y = ystart;
+
 	with (obj_fadeout) {
 		StartFadeOut(0.04);
 	}

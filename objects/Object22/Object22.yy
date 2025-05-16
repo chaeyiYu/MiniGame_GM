@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_trap",
+  "%Name":"Object22",
   "eventList":[],
   "managed":true,
-  "name":"obj_trap",
+  "name":"Object22",
   "overriddenProperties":[],
   "parent":{
     "name":"오브젝트",
@@ -27,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_potal",
-    "path":"sprites/spr_potal/spr_potal.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

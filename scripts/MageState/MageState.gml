@@ -14,7 +14,7 @@ function ChaseState_Mage(_owner) : State(_owner) constructor {
 	
 	OnEnter = function() {
 		originValue = owner.moveSpeed;
-		owner.moveSpeed *= 1.8;
+		owner.moveSpeed *= 2;
 	}
 	
 	OnUpdate = function() {

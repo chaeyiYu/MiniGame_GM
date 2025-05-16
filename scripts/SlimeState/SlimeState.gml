@@ -1,4 +1,4 @@
-function IdleState_Slime_s(_owner) : State(_owner) constructor {
+function IdleState_Slime(_owner) : State(_owner) constructor {
 }
 
 

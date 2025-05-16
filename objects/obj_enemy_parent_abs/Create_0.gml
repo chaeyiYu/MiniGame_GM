@@ -3,14 +3,11 @@
 targetX = x;
 targetY = y;
 
-//tileCollision = layer_tilemap_get_id("Tiles_Wall");
-
 minX = sprite_width;
 maxX = room_width - sprite_width;
 minY = sprite_height;
 maxY = room_height - sprite_height;
 
-isSlow = false;
 myFsm = new EnemyFSM();
 
 function EnemyMoveBase() {
@@ -24,12 +21,10 @@ function EnemyMoveBase() {
 	// collision
 	if place_meeting(x + _dx, y, [global.tileCollider, obj_enemy_parent_abs]) {
 		_dx = 0;
-		//show_debug_message("x 앞에 벽");
 	}
 	
 	if place_meeting(x, y + _dy, [global.tileCollider, obj_enemy_parent_abs]) {
 		_dy = 0;
-		//show_debug_message("y 앞에 벽");
 	}
 	
 	x += _dx;
@@ -48,20 +43,16 @@ function SetTarget() {
 	if (instance_exists(obj_player) && point_distance(x, y, obj_player.x, obj_player.y) < detectDistance){
 		targetX = obj_player.x;
 		targetY = obj_player.y;
-		show_debug_message("플 레 이 어 발 견");
 		return true;
 	}
 else
 	{
-		randomize();
 		targetX = random_range(xprevious - randMinX, xprevious + randMaxX);
 		targetY = random_range(yprevious - randMinY, yprevious + randMaxY);
-		//show_debug_message("random target pos");
 		return false;
 	}
 }
 
 function Slow() {
-	isSlow = true;
 	moveSpeed /= 2;
 }
