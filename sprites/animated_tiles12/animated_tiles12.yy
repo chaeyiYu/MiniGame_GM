@@ -81,8 +81,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"tg_tile",
+    "path":"texturegroups/tg_tile",
   },
   "type":0,
   "VTile":false,
