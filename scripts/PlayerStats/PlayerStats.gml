@@ -1,11 +1,17 @@
-global.recoverCoeff = 0.3
-
 function Struct_PlayerStats(_hp, _speed, _recovery, _recoverDelay) constructor {
 	hp = _hp;
 	maxHp = _hp;
+	
+	stamina = 50;
+	maxStamina = 50;
+	
 	moveSpeed = _speed;
+	
 	recovery = _recovery;
 	recoverDelay = _recoverDelay;
+	recoverTime = 2;
+	recoverCoeff = 0.2;
+	
 	lastHitTime = 0;
 	
 	// 메소드 필드
@@ -13,12 +19,15 @@ function Struct_PlayerStats(_hp, _speed, _recovery, _recoverDelay) constructor {
 		self.moveSpeed = _value;
 	}
 	
+	function Heal(_amount) {
+		self.hp = min(self.hp + _amount, self.maxHp);
+	}
+	
 	function Damage(_amount) {
 		self.hp -= _amount;
 		self.lastHitTime = current_time / 1000;
 		
 		if (self.hp <= 0) {
-			// call player dead func?
 			obj_player.OnDead();
 		}
 	}
@@ -29,11 +38,16 @@ function Struct_PlayerStats(_hp, _speed, _recovery, _recoverDelay) constructor {
 		}
 		
 		var _sec = delta_time / 1_000_000;
-		self.hp = min(self.hp + self.recovery * global.recoverCoeff * _sec, self.maxHp);
+		self.hp = min(self.hp + self.recovery * self.recoverCoeff * _sec, self.maxHp);
 	}
 	
 	function CanRecover() {
 		var _elapsed = current_time / 1000 - self.lastHitTime;
 		return _elapsed >= self.recoverDelay;
+	}
+	
+	function UseStamina(_amount) {
+		var _sec = delta_time / 1_000_000;
+		//self.stamina = max()
 	}
 }

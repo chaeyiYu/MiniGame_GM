@@ -1,20 +1,58 @@
 /// @description 여기에 설명 삽입
-enum EStateType {
-	act = 0,
-	detect,
-	attack,
-	disturbed,
-}
-
-
-
-currentState = EStateType.act;
 
 targetX = x;
 targetY = y;
 
-tileCollision = layer_tilemap_get_id("Tiles_Wall");
+minX = sprite_width;
+maxX = room_width - sprite_width;
+minY = sprite_height;
+maxY = room_height - sprite_height;
 
-alarm[0] = 60;
+myFsm = new EnemyFSM();
 
-myFsm = new EnemyFSM(); 
+function EnemyMoveBase() {
+	var _dir = point_direction(x, y, targetX, targetY);
+	var _dis = point_distance(x, y, targetX, targetY);
+	var _moveAdd = clamp(_dis, -moveSpeed, moveSpeed);
+	
+	var _dx = lengthdir_x(_moveAdd, _dir);
+	var _dy = lengthdir_y(_moveAdd, _dir);
+	
+	// collision
+	if place_meeting(x + _dx, y, [global.tileCollider, obj_enemy_parent_abs]) {
+		_dx = 0;
+	}
+	
+	if place_meeting(x, y + _dy, [global.tileCollider, obj_enemy_parent_abs]) {
+		_dy = 0;
+	}
+	
+	x += _dx;
+	y += _dy;
+	
+	// flip
+	if (_dx > 0) {
+		image_xscale = -1;
+	}
+	else if (_dx < 0) {
+		image_xscale = 1;
+	}
+}
+
+function SetTarget() {
+	if (instance_exists(obj_player) && point_distance(x, y, obj_player.x, obj_player.y) < detectDistance){
+		targetX = obj_player.x;
+		targetY = obj_player.y;
+		return true;
+	}
+else
+	{
+		targetX = random_range(xprevious - randMinX, xprevious + randMaxX);
+		targetY = random_range(yprevious - randMinY, yprevious + randMaxY);
+		return false;
+	}
+}
+
+function Slow() {
+	moveSpeed /= 2;
+}

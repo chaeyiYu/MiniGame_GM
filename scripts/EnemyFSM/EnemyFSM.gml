@@ -1,23 +1,3 @@
-enum EEnemyState {
-	idle,
-	act,
-	chase,
-	attack,
-	disturbed,
-}
-
-
-enemyType = array_create(10);
-enemyType[0] = "mage";
-
-
-enemyState = array_create(5);
-enemyState[0] = "idle";
-enemyState[1] = "act";
-enemyState[2] = "chase";
-enemyState[3] = "attack";
-enemyState[4] = "disturbed";
-
 
 /// @param {enum} 
 function EnemyFSM() constructor {
@@ -25,9 +5,15 @@ function EnemyFSM() constructor {
 	stateMap = {}
 	
 	// change
-	function ChangeState(_newState) {
-		if (self.currentState == _newState || !struct_exists(self.stateMap, _newState)) {
+	function ChangeState(_newState, _allowSameState = false) {
+		if (!struct_exists(self.stateMap, _newState)) {
+			show_debug_message("state not exist");
 			return;
+		}
+		if (!_allowSameState) {
+			if (self.currentState == _newState) {
+				return;
+			}
 		}
 		
 		if (self.currentState != undefined) {
@@ -36,6 +22,8 @@ function EnemyFSM() constructor {
 		
 		self.currentState = _newState;
 		self.stateMap[$ self.currentState].OnEnter();
+		
+		show_debug_message($"{currentState} --- in ChangeState");
 	}
 	
 
@@ -58,20 +46,14 @@ function EnemyFSM() constructor {
 		// stateMap 추가
 		self.stateMap = _stateMap;
 
-		show_debug_message(self.stateMap);
-
 		ChangeState(_initState);
-	}
-	
-	// 해당 몬스터의 stateMap 삭제
-	function Delete() {
-		
 	}
 	
 }
 
 /// @desc 
-function State() constructor {
+function State(_owner) constructor {
+	owner = _owner;
 	OnEnter = function() {}
 	OnUpdate = function() {}
 	OnExit = function() {}

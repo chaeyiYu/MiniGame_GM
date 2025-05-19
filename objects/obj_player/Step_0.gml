@@ -4,4 +4,3 @@
 WalkOrRun();
 
 myStats.Recover();
-

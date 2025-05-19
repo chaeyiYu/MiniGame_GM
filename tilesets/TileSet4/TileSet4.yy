@@ -23,11 +23,13 @@
   },
   "spriteNoExport":false,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"tg_tile",
+    "path":"texturegroups/tg_tile",
   },
   "tileAnimationFrames":[
     {"$GMTileAnimation":"","%Name":"animation_1","frames":[110,111,112,113,114,115,116,117,117,119,120,120,120,120,120,120,],"name":"animation_1","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
+    {"$GMTileAnimation":"","%Name":"animation_2","frames":[121,122,123,123,124,124,125,126,127,128,128,129,129,130,131,131,],"name":"animation_2","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
+    {"$GMTileAnimation":"","%Name":"animation_3","frames":[99,100,101,102,103,104,104,104,],"name":"animation_3","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
   ],
   "tileAnimationSpeed":15.0,
   "tileHeight":32,
