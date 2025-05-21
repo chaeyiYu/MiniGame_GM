@@ -14,13 +14,13 @@ function CrossItem(_id) : ItemBase(_id) constructor {
 			x : _x,
 			y : _y,
 			isEffectDraw : true,
-			radius : radius,
+			rad : radius,
 			damaged : false,
 			delay : 60 * 5,
 			sprite: spr_item_cross,
 			Damage : function() {
 				with (obj_enemy_parent_abs) {
-					if (point_in_circle(x, y, other.x, other.y, other.radius)) {
+					if (point_in_circle(x, y, other.x, other.y, other.rad)) {
 						Slow();
 						other.damaged = true;
 					}
@@ -44,6 +44,7 @@ function AppleItem(_id) : ItemBase(_id) constructor {
 			y : _y,
 			distance : 500,
 			isEffectDraw : false,
+			rad : -1,
 			damaged : false,
 			delay : 60 * 3,
 			sprite: spr_item_apple,
