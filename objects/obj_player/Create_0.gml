@@ -1,19 +1,41 @@
 /// @description 여기에 설명 삽입
 // 이 에디터에 코드를 작성할 수 있습니다
+enum EPlayerStatus {
+	stop,
+	walk,
+	run,
+	exhausted,
+}
+currentStatusP = EPlayerStatus.stop;
 
 // create stat
-originSpeed = 5;
-myStats = new Struct_PlayerStats(100, originSpeed, 10, 10);
+originSpeed = 3;
+hp = 100;
+recovery = 10;
+recoverDelay = 10;
+stamina = 100;
+recoveryStamina = 10;
+myStats = new Struct_PlayerStats(hp, originSpeed, recovery, recoverDelay, stamina, recoveryStamina);
+
+staminaDrainRate = 20;
+staminaRegenRate = 10;
+elapsed = 0.0;
+
+canMove = false;
 
 minX = sprite_width;
 maxX = room_width - sprite_width;
 minY = sprite_height;
 maxY = room_height - sprite_height;
 
-
 function Move() {
 	var dirHorizontal = keyboard_check(vk_right) - keyboard_check(vk_left);
 	var dirVertical = keyboard_check(vk_down) - keyboard_check(vk_up);
+	
+	if (dirHorizontal == 0 && dirVertical == 0) {
+		currentStatusP = EPlayerStatus.stop;
+		return;
+	}
 	
 	if (dirHorizontal != 0 || dirVertical != 0) {
 		var lookDir = point_direction(0, 0, dirHorizontal, dirVertical);
@@ -43,16 +65,21 @@ function Move() {
 		if (dirHorizontal != 0) {
 			image_xscale = -dirHorizontal;
 		}
-
 	}
-	
 }
 
 function WalkOrRun() {
 	if (keyboard_check(vk_shift)){
-		myStats.SetMoveSpeed(originSpeed * 1.5);
+		currentStatusP = EPlayerStatus.run;
+		if (!myStats.IsTired()) {
+			myStats.SetMoveSpeed(originSpeed * 1.5);
+		}
+		else {
+			myStats.SetMoveSpeed(originSpeed * 1.25);
+		}
 	}
 	else {
+		currentStatusP = EPlayerStatus.walk;
 		myStats.SetMoveSpeed(originSpeed);
 	}
 	Move();

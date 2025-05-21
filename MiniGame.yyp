@@ -59,8 +59,6 @@
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_result","path":"objects/obj_result/obj_result.yy",},},
     {"id":{"name":"obj_start","path":"objects/obj_start/obj_start.yy",},},
-    {"id":{"name":"Object22","path":"objects/Object22/Object22.yy",},},
-    {"id":{"name":"Object23","path":"objects/Object23/Object23.yy",},},
     {"id":{"name":"r_","path":"rooms/r_/r_.yy",},},
     {"id":{"name":"r_game_result","path":"rooms/r_game_result/r_game_result.yy",},},
     {"id":{"name":"r_game_start","path":"rooms/r_game_start/r_game_start.yy",},},
@@ -77,6 +75,7 @@
     {"id":{"name":"items","path":"sprites/items/items.yy",},},
     {"id":{"name":"monsters","path":"sprites/monsters/monsters.yy",},},
     {"id":{"name":"rogues","path":"sprites/rogues/rogues.yy",},},
+    {"id":{"name":"spr_crossitem_effect","path":"sprites/spr_crossitem_effect/spr_crossitem_effect.yy",},},
     {"id":{"name":"spr_door1","path":"sprites/spr_door1/spr_door1.yy",},},
     {"id":{"name":"spr_downstair","path":"sprites/spr_downstair/spr_downstair.yy",},},
     {"id":{"name":"spr_enemy_worm","path":"sprites/spr_enemy_worm/spr_enemy_worm.yy",},},
@@ -108,10 +107,9 @@
   "templateType":"game",
   "TextureGroups":[
     {"$GMTextureGroup":"","%Name":"Default","autocrop":true,"border":8,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"Default","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
-    {"$GMTextureGroup":"","%Name":"unused","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"dynamicpages","mipsToGenerate":0,"name":"unused","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMTextureGroup":"","%Name":"unused","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"unused","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
     {"$GMTextureGroup":"","%Name":"tg_game_play","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"tg_game_play","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
     {"$GMTextureGroup":"","%Name":"tg_tile","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"tg_tile","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
     {"$GMTextureGroup":"","%Name":"tg_result","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"tg_result","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
-    {"$GMTextureGroup":"","%Name":"tg_start","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"tg_start","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
   ],
 }
