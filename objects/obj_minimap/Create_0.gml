@@ -1,6 +1,7 @@
 /// @description 여기에 설명 삽입
 // 이 에디터에 코드를 작성할 수 있습니다
-var sizeDiv = 8;
+isDrawed = false;
+var sizeDiv = 10;
 
 surfMinimapBg = -1;
 surfMinimap = -1;
@@ -8,7 +9,7 @@ surfMinimap = -1;
 w = room_width / sizeDiv;
 h = room_height / sizeDiv;
 x = 15;
-y = 50;
+y = 90;
 
 function RefreshBG() {
 	surfMinimapBg = surface_create(w, h);
@@ -24,5 +25,3 @@ function RefreshBG() {
 	surface_reset_target();
 	surface_free(surfTemp);
 }
-
-RefreshBG();
