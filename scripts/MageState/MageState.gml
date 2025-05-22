@@ -35,8 +35,8 @@ function AttackState_Mage(_owner) : State(_owner) constructor {
 			Damage(atkPower);
 			
 			// damage effect
-			
-			GoToInitPos();
+			alarm[2] = 60 * 0.3;
+			//GoToInitPos();
 			// alarm ??
 			enemy.alarm[1] = 60 * 1;
 		}

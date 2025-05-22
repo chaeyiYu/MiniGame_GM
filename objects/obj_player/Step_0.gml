@@ -8,22 +8,38 @@ myStats.RecoverHp();
 
 // 달리면 스태미나 소모
 // 걷거나 멈추면 충전
-if (currentStatusP == EPlayerStatus.run) {
+if (currentMoveP == EPlayerMoveStatus.run) {
 	myStats.UseStamina(staminaDrainRate);
 }
 else {
 	myStats.RecoverStamina(staminaRegenRate);
 }
 
-myStats.IsExhausted();
-if (currentStatusP == EPlayerStatus.exhausted) {
+myStats.CheckTired();
+if (currentStmP == EPlayerStmStatus.exhausted) {
+	// 2초동안 멈춤
 	canMove = false;
+	currentMoveP = EPlayerMoveStatus.stop;
 	var _sec = delta_time / 1_000_000;
-	elapsed += _sec;
-	
-	if (elapsed > 2.0) {
+	exhaustedElapsed += _sec;
+
+	show_debug_message($"{exhaustedElapsed} timer moya");
+	if (exhaustedElapsed > exhaustedTimer) {
 		canMove = true;
-		currentStatusP = EPlayerStatus.stop;
-		elapsed = 0.0;
+		currentStmP = myStats.SetStmStatus();
+		exhaustedElapsed = 0.0;
+		show_debug_message($"{canMove} canMove true");
+		show_debug_message($"{currentStmP} current stamina status");
 	}
 }
+
+// 피격 시 점멸 효과
+if (isHit) {
+	hitTimer -= 0.1;
+	if (hitTimer <= 0) {
+		hitTimer = 1.5;
+		isHit = false;
+	}
+}
+
+//show_debug_message(currentStmP);

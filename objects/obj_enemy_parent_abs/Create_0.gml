@@ -8,6 +8,8 @@ maxX = room_width - sprite_width;
 minY = sprite_height;
 maxY = room_height - sprite_height;
 
+isSlow = false;
+
 myFsm = new EnemyFSM();
 
 function EnemyMoveBase() {
@@ -54,5 +56,6 @@ else
 }
 
 function Slow() {
-	moveSpeed /= 2;
+	moveSpeed /= 3;
+	isSlow = true;
 }

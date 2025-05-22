@@ -1,12 +1,19 @@
 /// @description 여기에 설명 삽입
 // 이 에디터에 코드를 작성할 수 있습니다
-enum EPlayerStatus {
+enum EPlayerStmStatus {
+	normal,
+	warnExhausted,
+	exhausted,
+}
+
+enum EPlayerMoveStatus {
 	stop,
 	walk,
 	run,
-	exhausted,
 }
-currentStatusP = EPlayerStatus.stop;
+
+currentMoveP = EPlayerMoveStatus.stop;
+currentStmP = EPlayerStmStatus.normal;
 
 // create stat
 originSpeed = 3;
@@ -17,9 +24,15 @@ stamina = 100;
 recoveryStamina = 10;
 myStats = new Struct_PlayerStats(hp, originSpeed, recovery, recoverDelay, stamina, recoveryStamina);
 
+// stamina 감소, 회복 비율/정지 타이머
 staminaDrainRate = 20;
 staminaRegenRate = 10;
-elapsed = 0.0;
+exhaustedElapsed = 0.0;
+exhaustedTimer = 2.0;
+
+hitElapsed = 0;
+hitTimer = 1.5;
+isHit = false;
 
 canMove = false;
 
@@ -31,11 +44,6 @@ maxY = room_height - sprite_height;
 function Move() {
 	var dirHorizontal = keyboard_check(vk_right) - keyboard_check(vk_left);
 	var dirVertical = keyboard_check(vk_down) - keyboard_check(vk_up);
-	
-	if (dirHorizontal == 0 && dirVertical == 0) {
-		currentStatusP = EPlayerStatus.stop;
-		return;
-	}
 	
 	if (dirHorizontal != 0 || dirVertical != 0) {
 		var lookDir = point_direction(0, 0, dirHorizontal, dirVertical);
@@ -70,16 +78,18 @@ function Move() {
 
 function WalkOrRun() {
 	if (keyboard_check(vk_shift)){
-		currentStatusP = EPlayerStatus.run;
-		if (!myStats.IsTired()) {
+		currentMoveP = EPlayerMoveStatus.run;
+		
+		// stamina 상태에 따른 달리기 속도 설정
+		if (currentStmP == EPlayerStmStatus.normal) {
 			myStats.SetMoveSpeed(originSpeed * 1.5);
 		}
 		else {
-			myStats.SetMoveSpeed(originSpeed * 1.25);
+			myStats.SetMoveSpeed(originSpeed * 1.2);
 		}
 	}
 	else {
-		currentStatusP = EPlayerStatus.walk;
+		currentMoveP = EPlayerMoveStatus.walk;
 		myStats.SetMoveSpeed(originSpeed);
 	}
 	Move();
@@ -87,10 +97,15 @@ function WalkOrRun() {
 
 function Heal(_amount) {
 	myStats.Heal(_amount);
+	var hpTxt = instance_create_layer(x, y - 30, global.instanceLayer, obj_damage_text);
+	hpTxt.SetHpText($"+{_amount}", c_lime);
 }
 
 function Damage(_amount) {
 	myStats.Damage(_amount);
+	isHit = true;
+	var hpTxt = instance_create_layer(x, y - 30, global.instanceLayer, obj_damage_text);
+	hpTxt.SetHpText($"-{_amount}", c_red);
 }
 
 function OnDead() {

@@ -7,6 +7,7 @@ function Struct_PlayerStats(_hp, _speed, _recovery, _recoverDelay, _stamina, _re
 	maxStamina = _stamina;
 	recoveryStamina = _recoveryStamina;
 	stmRecoverCoeff = 0.3;
+	isdrained = false;
 	
 	moveSpeed = _speed;
 	
@@ -50,23 +51,31 @@ function Struct_PlayerStats(_hp, _speed, _recovery, _recoverDelay, _stamina, _re
 	}
 	
 	function UseStamina(_amount) {
+		isdrained = true;
 		var _sec = delta_time / 1_000_000;
 		self.stamina = max(self.stamina - _amount * _sec, 0);
 	}
 	
-	function IsExhausted() {
-		if (self.stamina <= 5.0) {
-			obj_player.currentStatusP = EPlayerStatus.exhausted;
+	function CheckTired() {
+		if (self.stamina <= 5.0 && isdrained) {
+			obj_player.currentStmP = EPlayerStmStatus.exhausted;
+		}
+		else if (self.stamina <= 20.0 && isdrained) {
+			obj_player.currentStmP = EPlayerStmStatus.warnExhausted;
 		}
 	}
 	
-	function IsTired() {
-		return self.stamina <= 30.0;
+	function SetStmStatus() {
+		return self.stamina <= 20 ? EPlayerStmStatus.warnExhausted : EPlayerStmStatus.normal;
 	}
 	
 	function RecoverStamina(_amount) {
+		isdrained = false;
 		var _sec = delta_time / 1_000_000;
 		self.stamina = min(self.stamina + _amount * stmRecoverCoeff * _sec, self.maxStamina);
+		if (self.stamina > 20.0) {
+			obj_player.currentStmP = EPlayerStmStatus.normal;
+		}
 	}
 	
 }
