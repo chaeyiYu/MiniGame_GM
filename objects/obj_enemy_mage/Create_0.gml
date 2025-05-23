@@ -3,7 +3,7 @@
 event_inherited();
 
 timer = 0;
-
+originSpeed = moveSpeed;
 
 #region 함수정의
 function InitState() {
