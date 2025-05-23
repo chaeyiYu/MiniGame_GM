@@ -18,7 +18,7 @@ global.myItemsSprite = {
 global.key = 0;
 global.maxKey = 5;
 
-global.tileCollider = layer_tilemap_get_id("Tiles_Wall");
+global.wallLayer = layer_tilemap_get_id("Tiles_Wall");
 global.waterlayer = layer_tilemap_get_id("Tiles_Water");
 global.instanceLayer = layer_get_id("Instances");
 global.structLayer = layer_get_id("Instances_structure");
@@ -30,4 +30,7 @@ enum eResult {
 }
 global.gameResult = eResult.none;
 
+// 시작할 때 생성
 SpawnMage();
+SpawnKeyOf1Phase(1175, 1408, 168, 64, 1);
+SpawnKeyOf1Phase(1320, 1505, 248, 304, 2);

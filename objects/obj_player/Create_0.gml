@@ -51,10 +51,10 @@ function Move() {
 		var yAdd = lengthdir_y(myStats.moveSpeed, lookDir);
 
 		// collision
-		if place_meeting(x + xAdd, y, [global.tileCollider, obj_door]) {
+		if place_meeting(x + xAdd, y, [global.wallLayer, obj_door]) {
 			xAdd = 0;
 		}
-		if place_meeting(x, y + yAdd, [global.tileCollider, obj_door]) {
+		if place_meeting(x, y + yAdd, [global.wallLayer, obj_door]) {
 			yAdd = 0;
 		}
 		
@@ -122,5 +122,14 @@ function GoToInitPos() {
 
 	with (obj_fadeout) {
 		StartFadeOut(0.04);
+	}
+	
+	if (instance_exists(obj_enemy_mage)) {
+		with (obj_enemy_mage) {
+			if (distance_to_object(other) < attackDistance + 30) {
+				x = xstart;
+				y = ystart;
+			}
+		}
 	}
 }

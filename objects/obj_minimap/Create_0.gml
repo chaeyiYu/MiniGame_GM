@@ -17,7 +17,7 @@ function RefreshBG() {
 	var surfTemp = surface_create(room_width, room_height);
 	surface_set_target(surfTemp);
 	draw_clear(c_black);
-	draw_tilemap(global.tileCollider, 0, 0);
+	draw_tilemap(global.wallLayer, 0, 0);
 	surface_reset_target();
 	
 	surface_set_target(surfMinimapBg);

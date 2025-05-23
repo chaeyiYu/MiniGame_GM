@@ -1,13 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_start",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":32,"eventType":9,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_soundDistraction",
+  "eventList":[],
   "managed":true,
-  "name":"obj_start",
+  "name":"obj_soundDistraction",
   "overriddenProperties":[],
   "parent":{
     "name":"오브젝트",
@@ -32,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_game_start",
-    "path":"sprites/spr_game_start/spr_game_start.yy",
+    "name":"spr_coin3_2",
+    "path":"sprites/spr_coin3_2/spr_coin3_2.yy",
   },
   "spriteMaskId":null,
   "visible":true,
