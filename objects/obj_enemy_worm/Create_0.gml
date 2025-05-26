@@ -11,7 +11,7 @@ function SetRangeOfY() {
 }
 
 function MoveVertical() {
-	yOffset = random_range(randMinY, randMaxY);
+	var yOffset = random_range(randMinY, randMaxY);
 	
 	targetX = x;
 	targetY = isGoingDown ? y + yOffset * moveSpeed: y - yOffset * moveSpeed;

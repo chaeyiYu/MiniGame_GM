@@ -21,11 +21,11 @@ function EnemyMoveBase() {
 	var _dy = lengthdir_y(_moveAdd, _dir);
 	
 	// collision
-	if place_meeting(x + _dx, y, [global.wallLayer, obj_enemy_parent_abs]) {
+	if place_meeting(x + _dx, y, [global.wallLayer, obj_enemy_parent_abs, global.shelterLayer]) {
 		_dx = 0;
 	}
 	
-	if place_meeting(x, y + _dy, [global.wallLayer, obj_enemy_parent_abs]) {
+	if place_meeting(x, y + _dy, [global.wallLayer, obj_enemy_parent_abs, global.shelterLayer]) {
 		_dy = 0;
 	}
 	
@@ -53,6 +53,6 @@ function SetRandomTargetPos() {
 
 
 function Slow() {
-	moveSpeed /= 3;
+	moveSpeed /= 4;
 	isSlow = true;
 }
