@@ -6,7 +6,6 @@ for (var i = array_length(global.itemEffects) - 1; i>=0 ; i--) {
 		item.Damage();
 	}
 	
-	
 	item.delay--;
 	
 	if (item.delay <= 0 || item.damaged) {

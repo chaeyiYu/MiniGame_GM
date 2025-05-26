@@ -6,3 +6,5 @@ show_debug_overlay(true);
 var _arr_names = texturegroup_get_names();
 show_debug_message("Texture Groups:\n--------------");
 array_foreach(_arr_names, show_debug_message);
+
+global.IsFirstStart = true;

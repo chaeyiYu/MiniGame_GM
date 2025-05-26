@@ -60,7 +60,7 @@ function Struct_PlayerStats(_hp, _speed, _recovery, _recoverDelay, _stamina, _re
 		if (self.stamina <= 5.0 && isdrained) {
 			obj_player.currentStmP = EPlayerStmStatus.exhausted;
 		}
-		else if (self.stamina <= 20.0 && isdrained) {
+		else if (self.stamina <= 30.0 && isdrained) {
 			obj_player.currentStmP = EPlayerStmStatus.warnExhausted;
 		}
 	}

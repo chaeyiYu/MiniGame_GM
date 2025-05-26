@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_item_apple",
+  "%Name":"obj_item_poison",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_item_apple",
+  "name":"obj_item_poison",
   "overriddenProperties":[],
   "parent":{
     "name":"오브젝트",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_item_apple",
-    "path":"sprites/spr_item_apple/spr_item_apple.yy",
+    "name":"spr_item_poison",
+    "path":"sprites/spr_item_poison/spr_item_poison.yy",
   },
   "spriteMaskId":null,
   "visible":true,

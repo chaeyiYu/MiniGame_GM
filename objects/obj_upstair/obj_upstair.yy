@@ -1,20 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_item_apple",
+  "%Name":"obj_upstair",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_item_apple",
+  "name":"obj_upstair",
   "overriddenProperties":[],
   "parent":{
     "name":"오브젝트",
     "path":"folders/오브젝트.yy",
   },
-  "parentObjectId":{
-    "name":"obj_item_parent",
-    "path":"objects/obj_item_parent/obj_item_parent.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_item_apple",
-    "path":"sprites/spr_item_apple/spr_item_apple.yy",
+    "name":"spr_upstair",
+    "path":"sprites/spr_upstair/spr_upstair.yy",
   },
   "spriteMaskId":null,
   "visible":true,

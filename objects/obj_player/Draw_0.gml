@@ -2,7 +2,6 @@
 // 이 에디터에 코드를 작성할 수 있습니다
 
 if (currentStmP == EPlayerStmStatus.warnExhausted && myStats.isdrained) {
-	// 색 상 변 화?
 	draw_sprite(spr_warning, -1, x + 5, y - 20);
 	image_blend = c_white;
 }
@@ -22,4 +21,3 @@ if (isHit) {
 
 draw_self();
 image_alpha = 1;
-//draw_set_alpha(1);

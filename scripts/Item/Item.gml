@@ -1,12 +1,13 @@
 function ItemBase(_id) constructor {
 	Id = _id;
+	isRange = false;
 	Use = function() {}
 }
 
 
 // Items
 function CrossItem(_id) : ItemBase(_id) constructor {
-	
+	isRange = false;
 	Use = function(_x, _y) {
 		var radius = 100;
 
@@ -23,8 +24,10 @@ function CrossItem(_id) : ItemBase(_id) constructor {
 					if (point_in_circle(x, y, other.x, other.y, other.rad)) {
 						Slow();
 						other.damaged = true;
+						PlaySfx(snd_monster_hit);
 					}
 				}
+				
 				
 			}
 			
@@ -36,7 +39,7 @@ function CrossItem(_id) : ItemBase(_id) constructor {
 
 
 function AppleItem(_id) : ItemBase(_id) constructor {
-	
+	isRange = false;
 	Use = function(_x, _y) {
 
 		var effect = {
@@ -56,6 +59,33 @@ function AppleItem(_id) : ItemBase(_id) constructor {
 						myFsm.ChangeState("itemHit");
 					}
 					other.damaged = true;
+				}
+			}
+			
+		}
+		array_push(global.itemEffects, effect);
+	}
+
+}
+
+function PoisonItem(_id) : ItemBase(_id) constructor {
+	isRange = true;
+	Use = function(_x, _y) {
+
+		var effect = {
+			x : _x,
+			y : _y,
+			isEffectDraw : true,
+			rad : 150,
+			damaged : false,
+			delay : 60 * 2,
+			sprite: spr_item_poison,
+			Damage : function() {
+				with (obj_slimeBoss2) {
+					if (point_in_circle(x, y, other.x, other.y, other.rad)) {
+						Damage();
+						other.damaged = true;
+					}
 				}
 			}
 			

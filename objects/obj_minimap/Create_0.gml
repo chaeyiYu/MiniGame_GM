@@ -6,15 +6,18 @@ var sizeDiv = 10;
 surfMinimapBg = -1;
 surfMinimap = -1;
 
-w = room_width / sizeDiv;
-h = room_height / sizeDiv;
-x = 15;
-y = 90;
+roomWidth = 1600;
+roomHeight = 1080;
+
+w = roomWidth / sizeDiv;
+h = roomHeight / sizeDiv;
+x = 6;
+y = 6;
 
 function RefreshBG() {
 	surfMinimapBg = surface_create(w, h);
 	
-	var surfTemp = surface_create(room_width, room_height);
+	var surfTemp = surface_create(roomWidth, roomHeight);
 	surface_set_target(surfTemp);
 	draw_clear(c_black);
 	draw_tilemap(global.wallLayer, 0, 0);

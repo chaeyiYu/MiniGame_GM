@@ -34,12 +34,14 @@ hitElapsed = 0;
 hitTimer = 1.5;
 isHit = false;
 
-canMove = false;
+// camera 수 정 필 요 할 
+canMove = true;
 
 minX = sprite_width;
 maxX = room_width - sprite_width;
 minY = sprite_height;
 maxY = room_height - sprite_height;
+
 
 function Move() {
 	var dirHorizontal = keyboard_check(vk_right) - keyboard_check(vk_left);
@@ -51,10 +53,10 @@ function Move() {
 		var yAdd = lengthdir_y(myStats.moveSpeed, lookDir);
 
 		// collision
-		if place_meeting(x + xAdd, y, [global.wallLayer, obj_door]) {
+		if place_meeting(x + xAdd, y, [global.wallLayer, obj_door_parent, obj_enemy_parent_abs]) {
 			xAdd = 0;
 		}
-		if place_meeting(x, y + yAdd, [global.wallLayer, obj_door]) {
+		if place_meeting(x, y + yAdd, [global.wallLayer, obj_door_parent, obj_enemy_parent_abs]) {
 			yAdd = 0;
 		}
 		
@@ -95,6 +97,10 @@ function WalkOrRun() {
 	Move();
 }
 
+function IsInSlime() {
+	return place_meeting(x, y, global.slimelayer);
+}
+
 function Heal(_amount) {
 	myStats.Heal(_amount);
 	var hpTxt = instance_create_layer(x, y - 30, global.instanceLayer, obj_damage_text);
@@ -102,6 +108,7 @@ function Heal(_amount) {
 }
 
 function Damage(_amount) {
+	PlaySfx(snd_hit);
 	myStats.Damage(_amount);
 	isHit = true;
 	var hpTxt = instance_create_layer(x, y - 30, global.instanceLayer, obj_damage_text);
@@ -132,4 +139,5 @@ function GoToInitPos() {
 			}
 		}
 	}
+	canMove = true;
 }

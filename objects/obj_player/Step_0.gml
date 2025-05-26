@@ -6,10 +6,27 @@ if (canMove) {
 }
 myStats.RecoverHp();
 
+if (place_meeting(x, y, global.waterlayer)) {
+	PlaySfxLoop(snd_walking_in_water);
+}
+else {
+	StopSound(snd_walking_in_water);
+}
+
+if (place_meeting(x, y, global.slimelayer)) {
+	PlaySfxLoop(snd_walking_on_slime);
+}
+else {
+	StopSound(snd_walking_on_slime);
+}
+
 // 달리면 스태미나 소모
 // 걷거나 멈추면 충전
 if (currentMoveP == EPlayerMoveStatus.run) {
 	myStats.UseStamina(staminaDrainRate);
+}
+else if (IsInSlime()) {
+	myStats.UseStamina(staminaDrainRate / 5);
 }
 else {
 	myStats.RecoverStamina(staminaRegenRate);
@@ -23,13 +40,11 @@ if (currentStmP == EPlayerStmStatus.exhausted) {
 	var _sec = delta_time / 1_000_000;
 	exhaustedElapsed += _sec;
 
-	show_debug_message($"{exhaustedElapsed} timer moya");
 	if (exhaustedElapsed > exhaustedTimer) {
 		canMove = true;
 		currentStmP = myStats.SetStmStatus();
 		exhaustedElapsed = 0.0;
-		show_debug_message($"{canMove} canMove true");
-		show_debug_message($"{currentStmP} current stamina status");
+		
 	}
 }
 
@@ -42,4 +57,3 @@ if (isHit) {
 	}
 }
 
-//show_debug_message(currentStmP);

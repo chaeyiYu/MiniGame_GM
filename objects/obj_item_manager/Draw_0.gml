@@ -12,12 +12,8 @@ for (var i = array_length(global.itemEffects) - 1; i>=0 ; i--) {
 	else{
 	draw_sprite(item.sprite, -1, item.x, item.y);
 
-	draw_set_alpha(0.2);
-	draw_set_color(c_yellow);
 	draw_sprite_ext(spr_crossitem_effect, -1, item.x, item.y, item.rad / 32, item.rad / 32, 0, image_blend, image_alpha);
 	//draw_circle(item.x, item.y, item.rad, false);	// 추가 swap 유발
-	
-	draw_set_alpha(1);
-	draw_set_color(global.originColor);
+
 	}
 }

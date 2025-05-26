@@ -6,20 +6,14 @@ randomize();
 //show_debug_overlay(true);  
 
 
-global.itemCross = new CrossItem("cross");
-global.itemApple = new AppleItem("apple");
-global.itemEffects = [];
-global.myItems = [];
-global.myItemsSprite = {
-	"cross" : spr_item_cross,
-	"apple" : spr_item_apple,
-}
 
-global.key = 0;
-global.maxKey = 5;
+global.key = 6;
+global.maxKey = 7;
 
 global.wallLayer = layer_tilemap_get_id("Tiles_Wall");
+global.shelterLayer = layer_tilemap_get_id("Tiles_Shelter");
 global.waterlayer = layer_tilemap_get_id("Tiles_Water");
+global.slimelayer = layer_tilemap_get_id("Tiles_Slime");
 global.instanceLayer = layer_get_id("Instances");
 global.structLayer = layer_get_id("Instances_structure");
 
@@ -29,6 +23,16 @@ enum eResult {
 	over,
 }
 global.gameResult = eResult.none;
+
+fadeOutTime = 2;
+w = display_get_gui_width();
+h = display_get_gui_height();
+
+// 문에 스폰 이벤트처럼
+if (instance_exists(obj_door2)) {
+	obj_door2.SpawnNextEnemy = SpawnBoss();
+}
+
 
 // 시작할 때 생성
 SpawnMage();
