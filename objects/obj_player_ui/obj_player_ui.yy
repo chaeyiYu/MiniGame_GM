@@ -1,18 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_enemy_boss",
-  "eventList":[],
+  "%Name":"obj_player_ui",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_enemy_boss",
+  "name":"obj_player_ui",
   "overriddenProperties":[],
   "parent":{
-    "name":"enemy",
-    "path":"folders/오브젝트/enemy.yy",
+    "name":"ui",
+    "path":"folders/오브젝트/controller_etc/ui.yy",
   },
-  "parentObjectId":{
-    "name":"obj_enemy_parent_abs",
-    "path":"objects/obj_enemy_parent_abs/obj_enemy_parent_abs.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_boss",
-    "path":"sprites/spr_boss/spr_boss.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

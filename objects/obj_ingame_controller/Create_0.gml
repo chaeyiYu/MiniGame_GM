@@ -2,12 +2,7 @@
 // 이 에디터에 코드를 작성할 수 있습니다
 randomize();
 
-//texture_debug_messages(true);
-//show_debug_overlay(true);  
-
-
-
-global.key = 6;
+global.key = 0;
 global.maxKey = 7;
 
 global.wallLayer = layer_tilemap_get_id("Tiles_Wall");
@@ -28,10 +23,12 @@ fadeOutTime = 2;
 w = display_get_gui_width();
 h = display_get_gui_height();
 
-// 문에 스폰 이벤트처럼
-if (instance_exists(obj_door2)) {
-	obj_door2.SpawnNextEnemy = SpawnBoss();
+function CheckGameOver(_player) {
+	if (!instance_exists(obj_proj_charge_potion)) {
+		_player. OnDead();
+	}
 }
+
 
 
 // 시작할 때 생성

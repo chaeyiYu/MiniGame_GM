@@ -10,8 +10,8 @@
   "name":"obj_door_parent",
   "overriddenProperties":[],
   "parent":{
-    "name":"오브젝트",
-    "path":"folders/오브젝트.yy",
+    "name":"door",
+    "path":"folders/오브젝트/door.yy",
   },
   "parentObjectId":null,
   "persistent":false,

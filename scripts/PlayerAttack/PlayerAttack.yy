@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"PlayerAttack",
   "parent":{
-    "name":"스크립트",
-    "path":"folders/스크립트.yy",
+    "name":"Player",
+    "path":"folders/스크립트/Player.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

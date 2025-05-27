@@ -1,13 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_soundDistraction",
-  "eventList":[],
+  "%Name":"obj_proj_charge_potion",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_soundDistraction",
+  "name":"obj_proj_charge_potion",
   "overriddenProperties":[],
   "parent":{
-    "name":"오브젝트",
-    "path":"folders/오브젝트.yy",
+    "name":"item",
+    "path":"folders/오브젝트/item.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_coin3_2",
-    "path":"sprites/spr_coin3_2/spr_coin3_2.yy",
+    "name":"spr_potion",
+    "path":"sprites/spr_potion/spr_potion.yy",
   },
   "spriteMaskId":null,
   "visible":true,

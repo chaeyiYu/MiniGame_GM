@@ -17,3 +17,12 @@ if (isHit) {
 		hitTimer = 1.5;
 	}
 }
+
+if (isDead) {
+	alpha -= 0.1;
+	
+	if (alpha <= 0) {
+		PlaySfx(snd_monster_hit);
+		instance_destroy();
+	}
+}

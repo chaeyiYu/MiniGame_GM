@@ -10,8 +10,8 @@
   "name":"obj_damage_text",
   "overriddenProperties":[],
   "parent":{
-    "name":"오브젝트",
-    "path":"folders/오브젝트.yy",
+    "name":"ui",
+    "path":"folders/오브젝트/controller_etc/ui.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -3,12 +3,10 @@
 
 global.itemCross = new CrossItem("cross");
 global.itemApple = new AppleItem("apple");
-global.itemPoison = new PoisonItem("poison");
 
 global.itemEffects = [];
 global.myItems = [];
 global.myItemsSprite = {
 	"cross" : spr_item_cross,
 	"apple" : spr_item_apple,
-	"poison" : spr_item_poison,
 }

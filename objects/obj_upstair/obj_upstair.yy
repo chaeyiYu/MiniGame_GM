@@ -8,8 +8,8 @@
   "name":"obj_upstair",
   "overriddenProperties":[],
   "parent":{
-    "name":"오브젝트",
-    "path":"folders/오브젝트.yy",
+    "name":"structure",
+    "path":"folders/오브젝트/structure.yy",
   },
   "parentObjectId":null,
   "persistent":false,

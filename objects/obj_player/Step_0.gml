@@ -32,7 +32,7 @@ else {
 	myStats.RecoverStamina(staminaRegenRate);
 }
 
-myStats.CheckTired();
+myStats. CheckTired();
 if (currentStmP == EPlayerStmStatus.exhausted) {
 	// 2초동안 멈춤
 	canMove = false;

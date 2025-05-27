@@ -6,7 +6,7 @@ if (showText) {
 	//draw_text_transformed(x, y - 50, $"{global.key / requiredKey}", 1, 1, 0);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);
-	draw_text_transformed_color(x, y - 50, $"{global.key}/{requiredKey}", 1, 1, 0, c_red, c_red, c_red, c_red, 1);
+	draw_text_transformed_color(x, y - 40, $"{global.key}/{requiredKey}", 1, 1, 0, c_red, c_red, c_red, c_red, 1);
 }
 
 draw_self();

@@ -5,6 +5,5 @@ if (global.IsFirstStart) {
 	
 	if (fadeOutTime <= 0) {
 		global.IsFirstStart = false;
-		
 	}
 }

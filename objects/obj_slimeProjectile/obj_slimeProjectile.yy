@@ -10,8 +10,8 @@
   "name":"obj_slimeProjectile",
   "overriddenProperties":[],
   "parent":{
-    "name":"오브젝트",
-    "path":"folders/오브젝트.yy",
+    "name":"enemy",
+    "path":"folders/오브젝트/enemy.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -30,6 +30,8 @@ function SpawnMage() {
 
 }
 
+
+
 function SpawnBoss() {
 	var randReal = irandom(3);
 	
@@ -51,3 +53,6 @@ function SpawnBoss() {
 	}
 
 }
+
+
+

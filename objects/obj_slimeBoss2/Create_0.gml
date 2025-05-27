@@ -5,13 +5,16 @@ event_inherited();
 isReal = false;
 heart = 0;
 
-projSpeed = 10;
+projSpeed = 8;
 hitTimer = 1.5;
 isHit = false;
+isDead = false;
+alpha = 1;
 
 function FireProjectile() {
 	var proj = instance_create_layer(x, y, global.instanceLayer, obj_slimeProjectile);
 	proj.Init(point_direction(x, y, obj_player.x, obj_player.y), projSpeed, attackPower);
+	PlaySfxOverlap(snd_item_use);
 }
 
 function InitState() {
@@ -40,14 +43,14 @@ function DamageReal() {
 	isHit = true;
 	PlaySfx(snd_monster_hit);
 	
-	if (heart == 3) {
-		// create posion??
+	if (heart % 2 == 0 && heart != 0) {
+		var poison = instance_create_layer(x, y, global.instanceLayer, obj_poison);
+		poison.Init(attackPower/2);
 	}
 
 	if (heart <= 0) {
-		// create dead effect
-		instance_create_layer(x + irandom(100), y + irandom(80), global.instanceLayer, obj_Key);
-		instance_destroy();
+		instance_create_layer(x, y, global.instanceLayer, obj_Key);
+		KillEveryBossMon();
 	}
 }
 
@@ -60,9 +63,8 @@ function DamageFake() {
 	PlaySfx(snd_monster_hit);
 
 	if (heart <= 0) {
-		// create dead effect
-		var key = instance_create_layer(x + irandom(100), y + irandom(80), global.instanceLayer, obj_item_poison);
-		instance_destroy();
+		var key = instance_create_layer(x , y , global.instanceLayer, obj_proj_charge_potion);
+		isDead = true;
 	}
 }
 

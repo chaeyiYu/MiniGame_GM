@@ -8,8 +8,8 @@
   "name":"obj_door1",
   "overriddenProperties":[],
   "parent":{
-    "name":"오브젝트",
-    "path":"folders/오브젝트.yy",
+    "name":"door",
+    "path":"folders/오브젝트/door.yy",
   },
   "parentObjectId":{
     "name":"obj_door_parent",

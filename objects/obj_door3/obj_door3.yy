@@ -1,15 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_slimeBoss1",
-  "eventList":[],
+  "%Name":"obj_door3",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_slimeBoss1",
+  "name":"obj_door3",
   "overriddenProperties":[],
   "parent":{
-    "name":"enemy",
-    "path":"folders/오브젝트/enemy.yy",
+    "name":"door",
+    "path":"folders/오브젝트/door.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_door_parent",
+    "path":"objects/obj_door_parent/obj_door_parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -28,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_slimeBoss1",
-    "path":"sprites/spr_slimeBoss1/spr_slimeBoss1.yy",
+    "name":"spr_door3",
+    "path":"sprites/spr_door3/spr_door3.yy",
   },
   "spriteMaskId":null,
   "visible":true,

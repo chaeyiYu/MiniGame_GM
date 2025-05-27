@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"WormState",
   "parent":{
-    "name":"스크립트",
-    "path":"folders/스크립트.yy",
+    "name":"Enemy",
+    "path":"folders/스크립트/Enemy.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

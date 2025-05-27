@@ -8,6 +8,10 @@ if (isHit) {
 		image_alpha = 0.3;
 	}
 }
+
+if (isDead) {
+	image_alpha = alpha;
+}
 draw_self();
 
 image_alpha = 1;

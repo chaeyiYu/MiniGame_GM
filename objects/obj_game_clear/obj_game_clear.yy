@@ -6,8 +6,8 @@
   "name":"obj_game_clear",
   "overriddenProperties":[],
   "parent":{
-    "name":"오브젝트",
-    "path":"folders/오브젝트.yy",
+    "name":"outgame",
+    "path":"folders/오브젝트/outgame.yy",
   },
   "parentObjectId":null,
   "persistent":false,

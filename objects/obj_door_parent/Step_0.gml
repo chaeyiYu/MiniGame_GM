@@ -10,7 +10,6 @@ if (point_distance(x, y, obj_player.x, obj_player.y) < disToPlayer) {
 	}
 	else {
 		PlaySfx(snd_open_door);
-		SpawnNextEnemy();
 		instance_destroy();
 	}
 }

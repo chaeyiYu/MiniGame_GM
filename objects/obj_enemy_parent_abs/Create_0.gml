@@ -56,3 +56,7 @@ function Slow() {
 	moveSpeed /= 4;
 	isSlow = true;
 }
+
+function KillEveryBossMon() {
+	instance_destroy(obj_slimeBoss2);
+}

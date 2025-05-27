@@ -4,7 +4,7 @@ dir = 0;
 attackPower = 0;
 duration = 2;
 
-col = [global.wallLayer, global.shelterLayer, obj_slimeBoss1, obj_enemy_boss];
+col = [global.wallLayer, global.shelterLayer];
 
 function Init(_dir, _speed, _attackPower) {
 	dir = _dir;

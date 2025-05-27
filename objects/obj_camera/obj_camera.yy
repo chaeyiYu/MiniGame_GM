@@ -10,8 +10,8 @@
   "name":"obj_camera",
   "overriddenProperties":[],
   "parent":{
-    "name":"오브젝트",
-    "path":"folders/오브젝트.yy",
+    "name":"controller_etc",
+    "path":"folders/오브젝트/controller_etc.yy",
   },
   "parentObjectId":null,
   "persistent":false,

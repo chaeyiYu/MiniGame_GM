@@ -3,11 +3,10 @@
 var isReal = other.isReal;
 
 if (isReal) {
-	other.DamageReal();
+	other. DamageReal();
 }
 else {
-	other.DamageFake();
-	show_debug_message("fake~~~~~~~~~~~~~");
+	other. DamageFake();
 }
 
 instance_destroy();

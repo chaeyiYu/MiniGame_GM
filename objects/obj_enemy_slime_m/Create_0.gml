@@ -9,8 +9,8 @@ function InitState() {
 	
 	// state 이름과 객체 매핑
 	slimeSmallStateMap = {
-	"idle" : idleStateSlime,
-	"attack" : attackStateSlime,
+		"idle" : idleStateSlime,
+		"attack" : attackStateSlime,
 	}
 	
 	myFsm.Register(slimeSmallStateMap, "idle");

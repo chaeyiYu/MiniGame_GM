@@ -9,4 +9,4 @@ function CanOpen() {
  	return global.key >= requiredKey;
 }
 
-SpawnNextEnemy = function() {}
+OnOpenEvent = function() {}

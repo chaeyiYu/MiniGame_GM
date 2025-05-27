@@ -8,8 +8,8 @@
   "name":"obj_Key",
   "overriddenProperties":[],
   "parent":{
-    "name":"오브젝트",
-    "path":"folders/오브젝트.yy",
+    "name":"player",
+    "path":"folders/오브젝트/player.yy",
   },
   "parentObjectId":null,
   "persistent":false,

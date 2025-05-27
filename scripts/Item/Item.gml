@@ -67,30 +67,3 @@ function AppleItem(_id) : ItemBase(_id) constructor {
 	}
 
 }
-
-function PoisonItem(_id) : ItemBase(_id) constructor {
-	isRange = true;
-	Use = function(_x, _y) {
-
-		var effect = {
-			x : _x,
-			y : _y,
-			isEffectDraw : true,
-			rad : 150,
-			damaged : false,
-			delay : 60 * 2,
-			sprite: spr_item_poison,
-			Damage : function() {
-				with (obj_slimeBoss2) {
-					if (point_in_circle(x, y, other.x, other.y, other.rad)) {
-						Damage();
-						other.damaged = true;
-					}
-				}
-			}
-			
-		}
-		array_push(global.itemEffects, effect);
-	}
-
-}

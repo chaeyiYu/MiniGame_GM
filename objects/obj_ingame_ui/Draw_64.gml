@@ -36,8 +36,9 @@ draw_text_transformed(barPosX1 - barMarginX, hpBarPosY1 - barMarginY, "HP", 1, 1
 // stamina text
 draw_text_transformed(barPosX1 - barMarginX, stmBarPosY1 - barMarginY, "STM", 1, 1, image_angle);
 
-
-// hp bar
+if (instance_exists(obj_player)) {
+	// hp bar
 draw_healthbar(barPosX1, hpBarPosY1, barPosX2, hpBarPosY2, obj_player.myStats.hp, c_black, c_red, c_lime, 0, true, true);
 // stamina bar
 draw_healthbar(barPosX1, stmBarPosY1, barPosX2, stmBarPosY2, obj_player.myStats.stamina, c_black, c_dkgray, c_orange, 0, true, true);
+}
