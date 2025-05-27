@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"스프라이트",
-    "path":"folders/스프라이트.yy",
+    "name":"asset_resource",
+    "path":"folders/스프라이트/asset_resource.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

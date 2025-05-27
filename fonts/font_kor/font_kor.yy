@@ -135,8 +135,8 @@
   "maintainGms1Font":false,
   "name":"font_kor",
   "parent":{
-    "name":"MiniGame",
-    "path":"MiniGame.yyp",
+    "name":"글꼴",
+    "path":"folders/글꼴.yy",
   },
   "pointRounding":0,
   "ranges":[

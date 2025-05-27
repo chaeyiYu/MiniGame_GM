@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"스프라이트",
-    "path":"folders/스프라이트.yy",
+    "name":"enemy",
+    "path":"folders/스프라이트/enemy.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

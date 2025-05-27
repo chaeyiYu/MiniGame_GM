@@ -12,8 +12,8 @@
   "duration":0.792,
   "name":"snd_door_lock",
   "parent":{
-    "name":"사운드",
-    "path":"folders/사운드.yy",
+    "name":"door",
+    "path":"folders/사운드/door.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

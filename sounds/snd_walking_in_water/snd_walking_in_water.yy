@@ -12,8 +12,8 @@
   "duration":10.032,
   "name":"snd_walking_in_water",
   "parent":{
-    "name":"사운드",
-    "path":"folders/사운드.yy",
+    "name":"walking",
+    "path":"folders/사운드/walking.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

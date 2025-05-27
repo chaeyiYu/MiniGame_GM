@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"스프라이트",
-    "path":"folders/스프라이트.yy",
+    "name":"structure",
+    "path":"folders/스프라이트/structure.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

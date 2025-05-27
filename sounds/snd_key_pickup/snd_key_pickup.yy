@@ -12,8 +12,8 @@
   "duration":1.750188,
   "name":"snd_key_pickup",
   "parent":{
-    "name":"사운드",
-    "path":"folders/사운드.yy",
+    "name":"item_interaction",
+    "path":"folders/사운드/item_interaction.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

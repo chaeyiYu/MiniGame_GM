@@ -12,8 +12,8 @@
   "duration":3.892219,
   "name":"snd_warning",
   "parent":{
-    "name":"사운드",
-    "path":"folders/사운드.yy",
+    "name":"combat",
+    "path":"folders/사운드/combat.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

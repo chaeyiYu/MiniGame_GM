@@ -12,8 +12,8 @@
   "duration":2.76898,
   "name":"snd_open_door",
   "parent":{
-    "name":"사운드",
-    "path":"folders/사운드.yy",
+    "name":"door",
+    "path":"folders/사운드/door.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

@@ -44,8 +44,8 @@
   },
   "origin":4,
   "parent":{
-    "name":"스프라이트",
-    "path":"folders/스프라이트.yy",
+    "name":"player",
+    "path":"folders/스프라이트/player.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
