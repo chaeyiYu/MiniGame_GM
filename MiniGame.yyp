@@ -57,6 +57,7 @@
   "name":"MiniGame",
   "resources":[
     {"id":{"name":"font_kor","path":"fonts/font_kor/font_kor.yy",},},
+    {"id":{"name":"obj_bossEnter","path":"objects/obj_bossEnter/obj_bossEnter.yy",},},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_damage_text","path":"objects/obj_damage_text/obj_damage_text.yy",},},
     {"id":{"name":"obj_door_parent","path":"objects/obj_door_parent/obj_door_parent.yy",},},
@@ -121,6 +122,7 @@
     {"id":{"name":"items","path":"sprites/items/items.yy",},},
     {"id":{"name":"monsters","path":"sprites/monsters/monsters.yy",},},
     {"id":{"name":"rogues","path":"sprites/rogues/rogues.yy",},},
+    {"id":{"name":"spr_bossEnter","path":"sprites/spr_bossEnter/spr_bossEnter.yy",},},
     {"id":{"name":"spr_coin3_1","path":"sprites/spr_coin3_1/spr_coin3_1.yy",},},
     {"id":{"name":"spr_coin3_2","path":"sprites/spr_coin3_2/spr_coin3_2.yy",},},
     {"id":{"name":"spr_door1","path":"sprites/spr_door1/spr_door1.yy",},},
@@ -132,6 +134,7 @@
     {"id":{"name":"spr_game_clear","path":"sprites/spr_game_clear/spr_game_clear.yy",},},
     {"id":{"name":"spr_game_over","path":"sprites/spr_game_over/spr_game_over.yy",},},
     {"id":{"name":"spr_game_start","path":"sprites/spr_game_start/spr_game_start.yy",},},
+    {"id":{"name":"spr_help","path":"sprites/spr_help/spr_help.yy",},},
     {"id":{"name":"spr_item_apple","path":"sprites/spr_item_apple/spr_item_apple.yy",},},
     {"id":{"name":"spr_item_cross","path":"sprites/spr_item_cross/spr_item_cross.yy",},},
     {"id":{"name":"spr_item_effect","path":"sprites/spr_item_effect/spr_item_effect.yy",},},

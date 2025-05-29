@@ -7,3 +7,7 @@ if (global.IsFirstStart) {
 		global.IsFirstStart = false;
 	}
 }
+
+if (keyboard_check_pressed(ord("I"))) {
+	showHelp = !showHelp;
+}

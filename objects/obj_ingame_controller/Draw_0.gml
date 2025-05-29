@@ -3,3 +3,4 @@
 if (global.IsFirstStart) {
 	draw_sprite_ext(spr_explain, -1, w / 2, h / 3, 1, 1, 0, image_blend, fadeOutTime);
 }
+

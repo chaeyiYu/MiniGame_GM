@@ -1,18 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_ingame_controller",
+  "%Name":"obj_bossEnter",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":73,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_ingame_controller",
+  "name":"obj_bossEnter",
   "overriddenProperties":[],
   "parent":{
-    "name":"controller_etc",
-    "path":"folders/오브젝트/controller_etc.yy",
+    "name":"ui",
+    "path":"folders/오브젝트/controller_etc/ui.yy",
   },
   "parentObjectId":null,
   "persistent":false,

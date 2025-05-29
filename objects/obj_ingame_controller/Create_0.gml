@@ -19,6 +19,8 @@ enum eResult {
 }
 global.gameResult = eResult.none;
 
+showHelp = false;
+
 fadeOutTime = 2;
 w = display_get_gui_width();
 h = display_get_gui_height();
