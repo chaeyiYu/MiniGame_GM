@@ -10,8 +10,8 @@
   "name":"obj_item_manager",
   "overriddenProperties":[],
   "parent":{
-    "name":"오브젝트",
-    "path":"folders/오브젝트.yy",
+    "name":"item",
+    "path":"folders/오브젝트/item.yy",
   },
   "parentObjectId":null,
   "persistent":false,

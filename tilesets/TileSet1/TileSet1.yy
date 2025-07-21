@@ -5,9 +5,7 @@
   "macroPageTiles":{
     "SerialiseHeight":8,
     "SerialiseWidth":8,
-    "TileCompressedData":[
-      -17,0,-6,102,-2,0,-6,102,-2,0,-6,102,-2,0,-6,102,-2,0,-6,102,-2,0,-6,102,1,0,
-    ],
+    "TileCompressedData":[-64,0,],
     "TileDataFormat":1,
   },
   "name":"TileSet1",
@@ -29,7 +27,9 @@
     "name":"tg_tile",
     "path":"texturegroups/tg_tile",
   },
-  "tileAnimationFrames":[],
+  "tileAnimationFrames":[
+    {"$GMTileAnimation":"","%Name":"animation_1","frames":[231,231,232,233,233,234,234,236,],"name":"animation_1","resourceType":"GMTileAnimation","resourceVersion":"2.0",},
+  ],
   "tileAnimationSpeed":15.0,
   "tileHeight":32,
   "tilehsep":0,

@@ -87,8 +87,8 @@
   },
   "origin":0,
   "parent":{
-    "name":"player",
-    "path":"folders/스프라이트/player.yy",
+    "name":"asset_resource",
+    "path":"folders/스프라이트/asset_resource.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

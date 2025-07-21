@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"Item",
   "parent":{
-    "name":"스크립트",
-    "path":"folders/스크립트.yy",
+    "name":"Item",
+    "path":"folders/스크립트/Item.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

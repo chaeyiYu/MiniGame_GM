@@ -1,9 +1,48 @@
 /// @description 여기에 설명 삽입
 // 이 에디터에 코드를 작성할 수 있습니다
 
+event_user(0); // 이동관련 함수 정의 
+
+enum EPlayerStmStatus {
+	normal,
+	warnExhausted,
+	exhausted,
+}
+
+enum EPlayerMoveStatus {
+	stop,
+	walk,
+	run,
+}
+
+currentMoveP = EPlayerMoveStatus.stop;
+currentStmP = EPlayerStmStatus.normal;
+
 // create stat
-originSpeed = 5;
-myStats = new Struct_PlayerStats(100, originSpeed, 10, 10);
+originSpeed = 3;
+hp = 100;
+recovery = 10;
+recoverDelay = 10;
+stamina = 100;
+recoveryStamina = 10;
+myStats = new Struct_PlayerStats(hp, originSpeed, recovery, recoverDelay, stamina, recoveryStamina);
+
+// stamina 감소, 회복 비율/정지 타이머
+staminaDrainRate = 20;
+staminaRegenRate = 10;
+exhaustedElapsed = 0.0;
+exhaustedTimer = 2.0;
+
+hitElapsed = 0;
+hitTimer = 1.5;
+isHit = false;
+
+canAttack = false;
+currentProjectile = 0;
+maxProjectile = 10;
+
+// camera 수 정 필 요 할 
+canMove = true;
 
 minX = sprite_width;
 maxX = room_width - sprite_width;
@@ -21,10 +60,10 @@ function Move() {
 		var yAdd = lengthdir_y(myStats.moveSpeed, lookDir);
 
 		// collision
-		if place_meeting(x + xAdd, y, [global.tileCollider, obj_door]) {
+		if place_meeting(x + xAdd, y, [global.wallLayer, obj_door_parent]) {
 			xAdd = 0;
 		}
-		if place_meeting(x, y + yAdd, [global.tileCollider, obj_door]) {
+		if place_meeting(x, y + yAdd, [global.wallLayer, obj_door_parent]) {
 			yAdd = 0;
 		}
 		
@@ -43,35 +82,34 @@ function Move() {
 		if (dirHorizontal != 0) {
 			image_xscale = -dirHorizontal;
 		}
-
 	}
-	
 }
 
-function WalkOrRun() {
-	if (keyboard_check(vk_shift)){
-		myStats.SetMoveSpeed(originSpeed * 1.5);
-	}
-	else {
-		myStats.SetMoveSpeed(originSpeed);
-	}
-	Move();
+function IsInSlime() {
+	return place_meeting(x, y, global.slimelayer);
 }
 
 function Heal(_amount) {
+	PlaySfx(snd_key_pickup);
 	myStats.Heal(_amount);
+	var hpTxt = instance_create_layer(x, y - 30, global.instanceLayer, obj_damage_text);
+	hpTxt.SetHpText($"+{_amount}", c_lime);
 }
 
 function Damage(_amount) {
+	PlaySfx(snd_hit);
 	myStats.Damage(_amount);
+	isHit = true;
+	var hpTxt = instance_create_layer(x, y - 30, global.instanceLayer, obj_damage_text);
+	hpTxt.SetHpText($"-{_amount}", c_red);
 }
 
 function OnDead() {
 	global.gameResult = eResult.over;
 	with (obj_fadeout) {
-		StartFadeOut(0.03);
+		StartFadeOut(0.05);
 	}
-	alarm[1] = 60 * 1;
+	alarm[1] = 60 * 0.3;
 }
 
 function GoToInitPos() {
@@ -81,4 +119,14 @@ function GoToInitPos() {
 	with (obj_fadeout) {
 		StartFadeOut(0.04);
 	}
+	
+	if (instance_exists(obj_enemy_mage)) {
+		with (obj_enemy_mage) {
+			if (distance_to_object(other) < attackDistance + 30) {
+				x = xstart;
+				y = ystart;
+			}
+		}
+	}
+	canMove = true;
 }

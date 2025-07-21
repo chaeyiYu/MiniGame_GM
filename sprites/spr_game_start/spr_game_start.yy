@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"스프라이트",
-    "path":"folders/스프라이트.yy",
+    "name":"ui",
+    "path":"folders/스프라이트/ui.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -81,8 +81,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"tg_start",
-    "path":"texturegroups/tg_start",
+    "name":"Default",
+    "path":"texturegroups/Default",
   },
   "type":0,
   "VTile":false,

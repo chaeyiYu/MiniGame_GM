@@ -8,6 +8,8 @@ maxX = room_width - sprite_width;
 minY = sprite_height;
 maxY = room_height - sprite_height;
 
+isSlow = false;
+
 myFsm = new EnemyFSM();
 
 function EnemyMoveBase() {
@@ -19,11 +21,11 @@ function EnemyMoveBase() {
 	var _dy = lengthdir_y(_moveAdd, _dir);
 	
 	// collision
-	if place_meeting(x + _dx, y, [global.tileCollider, obj_enemy_parent_abs]) {
+	if place_meeting(x + _dx, y, [global.wallLayer, obj_enemy_parent_abs, global.shelterLayer]) {
 		_dx = 0;
 	}
 	
-	if place_meeting(x, y + _dy, [global.tileCollider, obj_enemy_parent_abs]) {
+	if place_meeting(x, y + _dy, [global.wallLayer, obj_enemy_parent_abs, global.shelterLayer]) {
 		_dy = 0;
 	}
 	
@@ -39,20 +41,22 @@ function EnemyMoveBase() {
 	}
 }
 
-function SetTarget() {
-	if (instance_exists(obj_player) && point_distance(x, y, obj_player.x, obj_player.y) < detectDistance){
-		targetX = obj_player.x;
-		targetY = obj_player.y;
-		return true;
-	}
-else
-	{
-		targetX = random_range(xprevious - randMinX, xprevious + randMaxX);
-		targetY = random_range(yprevious - randMinY, yprevious + randMaxY);
-		return false;
-	}
+function SetTarget(_targetObj) {
+	targetX = _targetObj.x;
+	targetY = _targetObj.y;
 }
 
+function SetRandomTargetPos() {
+	targetX = random_range(xprevious - randMinX, xprevious + randMaxX);
+	targetY = random_range(yprevious - randMinY, yprevious + randMaxY);
+}
+
+
 function Slow() {
-	moveSpeed /= 2;
+	moveSpeed /= 4;
+	isSlow = true;
+}
+
+function KillEveryBossMon() {
+	instance_destroy(obj_slimeBoss2);
 }

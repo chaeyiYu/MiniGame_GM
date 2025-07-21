@@ -44,8 +44,8 @@
   },
   "origin":4,
   "parent":{
-    "name":"스프라이트",
-    "path":"folders/스프라이트.yy",
+    "name":"player",
+    "path":"folders/스프라이트/player.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -100,8 +100,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"tg_game_play",
-    "path":"texturegroups/tg_game_play",
+    "name":"tg_tile",
+    "path":"texturegroups/tg_tile",
   },
   "type":0,
   "VTile":false,

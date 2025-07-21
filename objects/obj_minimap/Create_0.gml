@@ -1,22 +1,26 @@
 /// @description 여기에 설명 삽입
 // 이 에디터에 코드를 작성할 수 있습니다
-var sizeDiv = 8;
+isDrawed = false;
+var sizeDiv = 10;
 
 surfMinimapBg = -1;
 surfMinimap = -1;
 
-w = room_width / sizeDiv;
-h = room_height / sizeDiv;
-x = 15;
-y = 50;
+roomWidth = 1600;
+roomHeight = 1080;
+
+w = roomWidth / sizeDiv;
+h = roomHeight / sizeDiv;
+x = 6;
+y = 6;
 
 function RefreshBG() {
 	surfMinimapBg = surface_create(w, h);
 	
-	var surfTemp = surface_create(room_width, room_height);
+	var surfTemp = surface_create(roomWidth, roomHeight);
 	surface_set_target(surfTemp);
 	draw_clear(c_black);
-	draw_tilemap(global.tileCollider, 0, 0);
+	draw_tilemap(global.wallLayer, 0, 0);
 	surface_reset_target();
 	
 	surface_set_target(surfMinimapBg);
@@ -24,5 +28,3 @@ function RefreshBG() {
 	surface_reset_target();
 	surface_free(surfTemp);
 }
-
-RefreshBG();

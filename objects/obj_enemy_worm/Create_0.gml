@@ -6,17 +6,17 @@ event_inherited();
 isGoingDown = true;
 
 function SetRangeOfY() {
-	randMinY = random_range(0.5, 2.0);
-	randMaxY = random_range(8.0, 11.0);
+	randMinY = random_range(0.1, 1.0);
+	randMaxY = random_range(3.0, 4.5);
 }
 
 function MoveVertical() {
-	yOffset = random_range(randMinY, randMaxY);
+	var yOffset = random_range(randMinY, randMaxY);
 	
 	targetX = x;
-	targetY = isGoingDown ? y + yOffset : y - yOffset;
+	targetY = isGoingDown ? y + yOffset * moveSpeed: y - yOffset * moveSpeed;
 	
-	if place_meeting(targetX, targetY, global.tileCollider) {
+	if place_meeting(targetX, targetY, global.wallLayer) {
 		isGoingDown = !isGoingDown;
 	}
 	else {
