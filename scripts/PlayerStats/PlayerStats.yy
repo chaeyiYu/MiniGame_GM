@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"PlayerStats",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"PlayerStats",
+  "parent":{
+    "name":"Player",
+    "path":"folders/스크립트/Player.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

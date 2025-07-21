@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_key_pickup",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":1.750188,
+  "name":"snd_key_pickup",
+  "parent":{
+    "name":"item_interaction",
+    "path":"folders/사운드/item_interaction.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_key_pickup.mp3",
+  "type":0,
+  "volume":1.0,
+}

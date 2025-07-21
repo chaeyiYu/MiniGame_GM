@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"EnemySpawner",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"EnemySpawner",
+  "parent":{
+    "name":"Enemy",
+    "path":"folders/스크립트/Enemy.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

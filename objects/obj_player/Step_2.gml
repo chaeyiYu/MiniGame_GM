@@ -1,0 +1,11 @@
+/// @description 여기에 설명 삽입
+// 이 에디터에 코드를 작성할 수 있습니다
+
+x = clamp(x, minX, maxX);
+y = clamp(y, minY, maxY);
+
+with(all) {
+	if (layer != global.structLayer) {
+		depth = -bbox_bottom;
+	}
+}

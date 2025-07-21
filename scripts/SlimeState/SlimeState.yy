@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"SlimeState",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SlimeState",
+  "parent":{
+    "name":"Enemy",
+    "path":"folders/스크립트/Enemy.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
