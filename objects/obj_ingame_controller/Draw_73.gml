@@ -9,3 +9,4 @@ var vh  = camera_get_view_height(cam);
 if (showHelp) {
 draw_sprite_ext(spr_help, -1, vx + vw/2, vy + vh/2, 1, 1, 0, image_blend, 1);
 }
+// test
